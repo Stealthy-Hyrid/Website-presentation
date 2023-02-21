@@ -1,0 +1,34 @@
+/* Base Buttons */
+
+button:hover {
+    text-shadow: white 0px 0 10px;
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
+  
+  .index_button,
+  .link_button {
+    background-color: transparent;
+    border: none;
+    margin: 10px 0px;
+  }
+  
+  .index_button {
+    width: 200px;
+  }
+  
+  /* Accordion button */
+  
+  .accordion-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: white;
+  }

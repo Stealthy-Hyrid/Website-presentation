@@ -1,0 +1,40 @@
+/* Card and menu */
+
+#card_group {
+    height: 830px;
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  .card_settings {
+    height: 800px;
+    margin-left: 40px;
+  }
+
+  .box_settings {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    box-shadow: 1px 1px 15px white;
+  }
+
+  .display_settings {
+    margin-left: 50px;
+  }
+  
+  .logo_settings {
+    width: 140px;
+    cursor: pointer;
+    transform: scaleX(-1);
+    animation-delay: 200ms;
+    filter: invert(0%);
+  }
+  
+
+   /*
+  .index > .container-fluid {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+  }
+  */

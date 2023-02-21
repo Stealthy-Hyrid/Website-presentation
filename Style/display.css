@@ -1,0 +1,22 @@
+/* Small */
+
+@media (max-width: 768px) {
+    .display_lg,
+    #card_group {
+      display: none;
+    }
+    .display_settings {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+  }
+  
+
+  /* Large */
+
+  @media (min-width: 769px) {
+    .display_sm {
+      display: none;
+    }
+  }
+  

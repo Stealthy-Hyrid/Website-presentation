@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+      defer
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Trispace"
+    />
+    <link rel="stylesheet" href="./Style/main.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- Main container-->
+    <div class="container-fluid index">
+      <!-- Menu + Cards container-->
+      <div class="display_settings text_settings">
+        <!--Logo row-->
+        <div class="row">
+          <div class="col-1">
+            <img
+              id="logo"
+              class="logo_settings"
+              src="/Ressource/Image/tumblr_99e1a6e7924dd08f53a863840c6db23a_9385dc42_540.gif"
+              draggable="false"
+            />
+          </div>
+        </div>
+        <!-- Menu row-->
+        <div class="row">
+          <!--Large windows menu-->
+          <div class="col-2 popup text-center display_lg">
+            <div
+              class="accordion text-center"
+              id="accordionExample"
+              style="width: 200px"
+            >
+              <div class="accordion-item box_settings">
+                <p class="accordion-header" id="headingOne">
+                  <!-- Main button-->
+                  <button
+                    class="index_button text_settings"
+                    id="main-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainPop"
+                    aria-expanded="false"
+                    aria-controls="mainPop"
+                  >
+                    Main
+                  </button>
+                  <!-- About button-->
+                  <button
+                    class="index_button text_settings"
+                    id="about-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#aboutPop"
+                    aria-expanded="false"
+                    aria-controls="aboutPop"
+                  >
+                    About me
+                  </button>
+                  <!-- Portfolio button-->
+                  <button
+                    class="index_button text_settings"
+                    id="portfolio-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#portfolioPop"
+                    aria-expanded="false"
+                    aria-controls="portfolioPop"
+                  >
+                    Portfolio
+                  </button>
+                  <!-- Contact button-->
+                  <button
+                    class="index_button text_settings"
+                    id="contact-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#contactPop"
+                    aria-expanded="false"
+                    aria-controls="contactPop"
+                  >
+                    Contact me
+                  </button>
+                </p>
+              </div>
+              <!-- Link button-->
+              <div class="accordion-item box_settings">
+                <p class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed text_settings"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Links
+                  </button>
+                </p>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <button class="link_button text_settings">Github</button>
+                    <button class="link_button text_settings">LinkedIn</button>
+                    <button class="link_button text_settings">
+                      Curriculum vitae
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Small windows menu-->
+          <div
+            class="accordion display_sm accordion-flush"
+            id="small_accordion_group"
+          >
+            <div class="accordion-item box_settings">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed text_settings"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Main
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#small_accordion_group"
+              >
+                <div class="accordion-body text_settings">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the first item's accordion body.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item box_settings">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed text_settings"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  About me
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#small_accordion_group"
+              >
+                <div class="accordion-body text_settings">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the second item's accordion body. Let's imagine this being
+                  filled with some actual content.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item box_settings">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="accordion-button collapsed text_settings"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Portfolio
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#small_accordion_group"
+              >
+                <div class="accordion-body text_settings">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the
+                  space to make it look, at least at first glance, a bit more
+                  representative of how this would look in a real-world
+                  application.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item box_settings">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button
+                  class="accordion-button collapsed text_settings"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  Links
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFour"
+                data-bs-parent="#small_accordion_group"
+              >
+                <div class="accordion-body text_settings">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the second item's accordion body. Let's imagine this being
+                  filled with some actual content.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Popups menu-->
+          <div class="col-10 flex-row-reverse" id="card_group">
+            <!-- Default-->
+            <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="mainPop"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <p>a</p>
+              </div>
+            </div>
+
+            <!-- About me-->
+            <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="aboutPop"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <p>b</p>
+              </div>
+            </div>
+
+            <!-- Portfolio-->
+            <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="portfolioPop"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <p>c</p>
+              </div>
+            </div>
+            <!-- Contact me-->
+            <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="contactPop"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <p>d</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
