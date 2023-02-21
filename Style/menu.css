@@ -1,9 +1,9 @@
 /* Card and menu */
 
 #card_group {
-    height: 830px;
+    height: 820px;
     overflow: hidden;
-    padding: 10px;
+   
   }
   
   .card_settings {
@@ -29,7 +29,10 @@
     filter: invert(0%);
   }
   
-
+  #git_logo {
+    width: 50px;
+    filter: invert(100%);
+  }
    /*
   .index > .container-fluid {
     display: flex;

@@ -1,7 +1,14 @@
 body {
-    font-family: "Trispace";
+    font-family: "VT323";
   }
 
   .text_settings {
     color: white;
+    text-decoration: none;
+    
   }
+  
+  .display_lg, .accordion-button {
+    font-size: 25px;
+  }
+
