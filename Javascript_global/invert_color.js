@@ -20,7 +20,7 @@ function light_mod() {
   // Body + Logo
   Images.cat.style.filter = "invert(100%)";
   Images.cat.src = "/Ressource/Image/invert.gif";
-  General_settings.body.style.backgroundImage = "url(/Ressource/Image/869.jpg)";
+  General_settings.body.style.backgroundImage = "url(/Ressource/Image/light.jpg)";
   Images.git_large.style.filter = "invert(0%)";
   Images.git_small.style.filter = "invert(0%)";
 
@@ -42,7 +42,7 @@ function dark_mod() {
   // Body + Logo
   Images.cat.style.filter = "invert(0%)";
   Images.cat.src = "/Ressource/Image/base.gif";
-  General_settings.body.style.backgroundImage = "url(/Ressource/Image/722829.jpg)";
+  General_settings.body.style.backgroundImage = "url(/Ressource/Image/dark.jpg)";
   Images.git_large.style.filter = "invert(100%)";
   Images.git_small.style.filter = "invert(100%)";
 

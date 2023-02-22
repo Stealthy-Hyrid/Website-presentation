@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+      defer
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=VT323"
+    />
+    <link rel="stylesheet" href="./Style/main.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- Main container-->
+    <div class="container-fluid index">
+      <!-- Menu + Cards container-->
+      <div class="display_settings text_settings">
+        <!--Logo row-->
+        <div class="row">
+          <div class="col-1 mt-5">
+            <img
+              id="logo"
+              class="logo_settings"
+              src="/Ressource/Image/base.gif"
+              draggable="false"
+            />
+          </div>
+          <img id="bubble" src="./Ressource/Image/speech_fr.gif">
+        </div>
+        <!-- Menu row-->
+        <div class="row">
+          <!--Large windows menu-->
+          <div class="col-2 popup text-center display_lg">
+            <div
+              class="accordion text-center"
+              id="accordionExample"
+              style="width: 200px"
+            >
+              <div class="accordion-item box_settings">
+                <p class="accordion-header" id="headingOne">
+                  <!-- Main button-->
+                  <button
+                    class="index_button text_settings"
+                    id="main-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#main_card"
+                    aria-expanded="false"
+                    aria-controls="main_card"
+                  >
+                    Accueil
+                  </button>
+                  <!-- About button-->
+                  <button
+                    class="index_button text_settings"
+                    id="about-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#about_card"
+                    aria-expanded="false"
+                    aria-controls="about_card"
+                  >
+                    Présentation
+                  </button>
+                  <!-- Portfolio button-->
+                  <button
+                    class="index_button text_settings"
+                    id="portfolio-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#portfolio_card"
+                    aria-expanded="false"
+                    aria-controls="portfolio_card"
+                  >
+                    Portfolio
+                  </button>
+                  <!-- Contact button-->
+                  <button
+                    class="index_button text_settings"
+                    id="contact-btn"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#contact_card"
+                    aria-expanded="false"
+                    aria-controls="contact_card"
+                  >
+                    Contact
+                  </button>
+                </p>
+              </div>
+              <!-- Link button-->
+              <div class="accordion-item box_settings">
+                <p class="accordion-header">
+                  <button
+                  id="link-btn"
+                    class="accordion-button collapsed text_settings"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#link_card"
+                    aria-expanded="false"
+                    aria-controls="link_card"
+                  >
+                    Liens
+                  </button>
+                  
+                </p>
+                <div
+                  id="link_card"
+                  class="accordion-collapse collapse"
+                >
+                  <div class="accordion-body">
+                    <button class="link_button text_settings">
+                      <a class="text_settings" href="https://github.com/Stealthy-Hyrid" target="_blank">
+                        <img id="git_logo" class="git_logo" src="./Ressource/Image/logo-github.png">
+                      </a>
+                    </button>
+                    <button class="link_button text_settings">LinkedIn</button>
+                    <button class="link_button text_settings">
+                      Curriculum
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item box_settings">
+                <p class="accordion-header">
+                  <button
+                  id="link-btn"
+                    class="accordion-button collapsed text_settings"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#language_card"
+                    aria-expanded="false"
+                    aria-controls="language_card"
+                  >
+                    Langages
+                  </button>
+                  
+                </p>
+                <div
+                  id="language_card"
+                  class="accordion-collapse collapse"
+                >
+                  <div class="accordion-body">
+                    
+                    <button class="link_button text_settings" id="french">
+                      Français
+                    </button>
+                    <button class="link_button text_settings" id="english">
+                      English
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Small windows menu-->
+          <div class="small_menu">
+            <div class="accordion display_sm" id="small_accordion_group">
+              <div class="accordion-item box_settings">
+                <h2 class="accordion-header" id="accordion_one">
+                  <button
+                    class="accordion-button collapsed text_settings"
+                    id ="main_mobile"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="false"
+                    aria-controls="collapseOne"
+                  >
+                    Accueil
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#small_accordion_group"
+                >
+                  <div class="accordion-body text_settings">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the first item's accordion body.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item box_settings">
+                <h2 class="accordion-header" id="accordion_two">
+                  <button
+                    class="accordion-button collapsed text_settings"
+                    id ="about_mobile"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Présentation
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#small_accordion_group"
+                >
+                  <div class="accordion-body text_settings">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the second item's accordion body. Let's imagine this being
+                    filled with some actual content.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item box_settings">
+                <h2 class="accordion-header" id="accordion_three">
+                  <button
+                    class="accordion-button collapsed text_settings"
+                    id ="portfolio_mobile"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Portfolio
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#small_accordion_group"
+                >
+                  <div class="accordion-body text_settings">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the
+                    space to make it look, at least at first glance, a bit more
+                    representative of how this would look in a real-world
+                    application.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item box_settings">
+                <h2 class="accordion-header" id="accordion_four">
+                  <button
+                    class="accordion-button collapsed text_settings"
+                    id ="contact_mobile"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Contact
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="accordion_four"
+                  data-bs-parent="#small_accordion_group"
+                >
+                  <div class="accordion-body text_settings">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the
+                    space to make it look, at least at first glance, a bit more
+                    representative of how this would look in a real-world
+                    application.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item box_settings">
+                <h2 class="accordion-header" id="accordion_five">
+                  <button
+                    class="accordion-button collapsed text_settings"
+                    id ="link_mobile"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsefive"
+                    aria-expanded="false"
+                    aria-controls="collapsefive"
+                  >
+                    Liens
+                  </button>
+                </h2>
+                <div
+                  id="collapsefive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="accordion_five"
+                  data-bs-parent="#small_accordion_group"
+                >
+                  <div class="accordion-body text_settings text-center">
+                    <button class="link_button text_settings">
+                      <a class="text_settings" href="https://github.com/Stealthy-Hyrid" target="_blank">
+                        <img id="git_logo_small" class="git_logo" src="./Ressource/Image/logo-github.png">
+                      </a>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <!-- Cards-->
+          <div class="col-10 flex-row-reverse" id="card_group">
+            <!-- Main -->
+            <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="main_card"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <p>a</p>
+              </div>
+            </div>
+
+            <!-- About me-->
+            <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="about_card"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <p>b</p>
+              </div>
+            </div>
+
+            <!-- Portfolio-->
+            <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="portfolio_card"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <p>c</p>
+              </div>
+            </div>
+            <!-- Contact me-->
+            <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="contact_card"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <p>d</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./Javascript_fr/main_fr.js"></script>
+  </body>
+</html>

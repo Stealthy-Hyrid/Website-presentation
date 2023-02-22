@@ -1,6 +1,22 @@
-import { Images } from "./variables";
-import { Desktop_buttons } from "./variables";
-import { Mobile_buttons } from "./variables";
+import { Images } from "../Javascript_global/variables";
+import { Desktop_buttons } from "../Javascript_global/variables";
+import { Mobile_buttons } from "../Javascript_global/variables";
+import { Language_settings } from "../Javascript_global/variables";
+
+/// Language
+
+Language_settings.french.addEventListener("click", french);
+function french() {
+  location.replace('index_fr.html')
+}
+
+Language_settings.english.addEventListener("click", english);
+function english() {
+  location.replace('index_en.html')
+}
+
+
+/// Color switch
 
 const button_group = [
     Desktop_buttons.main,
@@ -47,14 +63,14 @@ const button_group = [
       DeleteClass.classList.remove("selected_button");
       DeleteClass.disabled=false
     });
-    button_group[0].textContent = "Main";
-    button_group[4].textContent = "Main";
-    button_group[1].textContent = "About";
-    button_group[5].textContent = "About";
+    button_group[0].textContent = "Accueil";
+    button_group[4].textContent = "Accueil";
+    button_group[1].textContent = "Présentation";
+    button_group[5].textContent = "Présentation";
     button_group[2].textContent = "Portfolio";
     button_group[6].textContent = "Portfolio";
     button_group[3].textContent = "Contact";
     button_group[7].textContent = "Contact";
-    button_group[8].textContent = "Links";
+    button_group[8].textContent = "Liens";
   }
   

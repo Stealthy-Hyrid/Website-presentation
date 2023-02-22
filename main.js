@@ -1,6 +1,0 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './Style/main.css'
-import '/Javascript/variables'
-import '/Javascript/buttons'
-import '/Javascript/invert_color'
-import '/Javascript/jquery-3.6.3'

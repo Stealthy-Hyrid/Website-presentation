@@ -23,9 +23,9 @@ export const Desktop_buttons = new Buttons(
 export const Mobile_buttons = new Buttons(
   document.getElementById("main_mobile"),
   document.getElementById("about_mobile"),
-  document.getElementById("portfolio_mobile"),
-  document.getElementById("link_mobile"),
-  document.getElementById("contact_mobile")
+  document.getElementById("portfolio_mobile"), 
+  document.getElementById("contact_mobile"),
+  document.getElementById("link_mobile")
 );
 
 /// Images
@@ -58,3 +58,15 @@ export const General_settings = new General(
   document.body
 )
 
+
+class Language {
+  constructor(french, english) {
+    this.french = french;
+    this.english = english;
+  }
+}
+
+export const Language_settings = new Language(
+  document.getElementById("french"),
+  document.getElementById("english")
+  )
