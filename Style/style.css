@@ -1,9 +1,27 @@
 body {
-  background: linear-gradient(
-    90deg,
-    rgba(200, 0, 223, 1) 0%,
-    rgba(67, 0, 117, 1) 49%,
-    rgba(0, 0, 0, 1) 94%
-  );
+ background-image: url(/Ressource/Image/722829.jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position:center
   
+}
+
+.logo_settings {
+  width: 140px;
+  cursor: pointer;
+  transform: scaleX(-1);
+  animation-delay: 200ms;
+  filter: invert(0%);
+}
+
+.git_logo {
+  width: 50px;
+  filter: invert(100%);
+}
+
+#bubble {
+  position: absolute;
+  left: 110px;
+  top:10px;
+  width: 200px;
 }

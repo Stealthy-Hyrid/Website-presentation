@@ -25,14 +25,15 @@
       <div class="display_settings text_settings">
         <!--Logo row-->
         <div class="row">
-          <div class="col-1">
+          <div class="col-1 mt-5">
             <img
               id="logo"
               class="logo_settings"
-              src="/Ressource/Image/tumblr_99e1a6e7924dd08f53a863840c6db23a_9385dc42_540.gif"
+              src="/Ressource/Image/base.gif"
               draggable="false"
             />
           </div>
+          <img id="bubble" src="./Ressource/Image/speech.gif">
         </div>
         <!-- Menu row-->
         <div class="row">
@@ -118,7 +119,7 @@
                   <div class="accordion-body">
                     <button class="link_button text_settings">
                       <a class="text_settings" href="https://github.com/Stealthy-Hyrid" target="_blank">
-                        <img id="git_logo" src="./Ressource/Image/logo-github.png">
+                        <img id="git_logo" class="git_logo" src="./Ressource/Image/logo-github.png">
                       </a>
                     </button>
                     <button class="link_button text_settings">LinkedIn</button>
@@ -134,9 +135,10 @@
           <div class="small_menu">
             <div class="accordion display_sm" id="small_accordion_group">
               <div class="accordion-item box_settings">
-                <h2 class="accordion-header" id="headingOne">
+                <h2 class="accordion-header" id="accordion_one">
                   <button
                     class="accordion-button collapsed text_settings"
+                    id ="main_mobile"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
@@ -160,9 +162,10 @@
                 </div>
               </div>
               <div class="accordion-item box_settings">
-                <h2 class="accordion-header" id="headingTwo">
+                <h2 class="accordion-header" id="accordion_two">
                   <button
                     class="accordion-button collapsed text_settings"
+                    id ="about_mobile"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo"
@@ -187,9 +190,10 @@
                 </div>
               </div>
               <div class="accordion-item box_settings">
-                <h2 class="accordion-header" id="headingThree">
+                <h2 class="accordion-header" id="accordion_three">
                   <button
                     class="accordion-button collapsed text_settings"
+                    id ="portfolio_mobile"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseThree"
@@ -217,37 +221,69 @@
                 </div>
               </div>
               <div class="accordion-item box_settings">
-                <h2 class="accordion-header" id="headingFour">
+                <h2 class="accordion-header" id="accordion_four">
                   <button
                     class="accordion-button collapsed text_settings"
+                    id ="contact_mobile"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseFour"
                     aria-expanded="false"
                     aria-controls="collapseFour"
                   >
-                    Links
+                    Contact
                   </button>
                 </h2>
                 <div
                   id="collapseFour"
                   class="accordion-collapse collapse"
-                  aria-labelledby="headingFour"
+                  aria-labelledby="accordion_four"
+                  data-bs-parent="#small_accordion_group"
+                >
+                  <div class="accordion-body text_settings">
+                    Placeholder content for this accordion, which is intended to
+                    demonstrate the <code>.accordion-flush</code> class. This is
+                    the third item's accordion body. Nothing more exciting
+                    happening here in terms of content, but just filling up the
+                    space to make it look, at least at first glance, a bit more
+                    representative of how this would look in a real-world
+                    application.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item box_settings">
+                <h2 class="accordion-header" id="accordion_five">
+                  <button
+                    class="accordion-button collapsed text_settings"
+                    id ="link_mobile"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsefive"
+                    aria-expanded="false"
+                    aria-controls="collapsefive"
+                  >
+                    Links
+                  </button>
+                </h2>
+                <div
+                  id="collapsefive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="accordion_five"
                   data-bs-parent="#small_accordion_group"
                 >
                   <div class="accordion-body text_settings text-center">
                     <button class="link_button text_settings">
                       <a class="text_settings" href="https://github.com/Stealthy-Hyrid" target="_blank">
-                        <img id="git_logo" src="./Ressource/Image/logo-github.png">
+                        <img id="git_logo_small" class="git_logo" src="./Ressource/Image/logo-github.png">
                       </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Popups menu-->
+          <!-- Cards-->
           <div class="col-10 flex-row-reverse" id="card_group">
-            <!-- Default-->
+            <!-- Main -->
             <div
               class="collapse-vertical collapse col-8 ms-5"
               id="main_card"
