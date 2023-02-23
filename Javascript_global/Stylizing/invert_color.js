@@ -23,10 +23,16 @@ function switch_button() {
 /// Light mod
 function light_mod() {
  
-  // Bubble
+  // Rain effect
+  General_settings.rain.style.visibility= "hidden"
+
+  // Default bubble
   Images.default_bubble.style.visibility = "hidden";
+ 
+  // Light mod bubble
   Images.switched_bubble.style.visibility = "visible";
-  Images.switched_bubble.src = "/Ressource/Image/light_bubble.png";
+  Images.switched_bubble.src = "/Ressource/Image/light_bubble.gif";
+  Images.switched_bubble.style.filter="invert(0%)"
 
   // Background
   General_settings.body.style.backgroundImage =
@@ -50,8 +56,8 @@ function light_mod() {
   }
 
   // Text
-  for (var k = 0; k < General_settings.text.length; k++) {
-    General_settings.text[k].style.color = "black";
+  for (var i= 0; i < General_settings.text.length; i++) {
+    General_settings.text[i].style.color = "black";
   }
 
   for (let i = 0; i < General_settings.selected.length; i++) {
@@ -62,8 +68,11 @@ function light_mod() {
 /// Dark mod
 function dark_mod() {
   
-  // Bubble
-  Images.switched_bubble.src = "/Ressource/Image/dark_bubble.png";
+  // Rain effect
+  General_settings.rain.style.visibility= "visible"
+  // Dark mod bubble
+  Images.switched_bubble.src = "/Ressource/Image/dark_bubble.gif";
+  Images.switched_bubble.style.filter="invert(100%)"
 
   // Background
   General_settings.body.style.backgroundImage =

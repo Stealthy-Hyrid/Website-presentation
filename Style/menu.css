@@ -1,13 +1,10 @@
 /* Card and menu */
 
 #card_group {
-    height: 820px;
     overflow: hidden;
-   
   }
   
   .card_settings {
-    height: 800px;
     margin-left: 40px;
   }
 

@@ -1,8 +1,43 @@
 body {
  background-image: url(/Ressource/Image/dark.jpg);
- background-size: cover;
+ background-size: fill;
  background-repeat: no-repeat;
- background-position:center
-  
+ background-position:top;
+
 }
 
+/* Rain */
+section {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    
+}
+
+section:before {
+    filter: brightness(0%) ;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(
+/Ressource/Image/rain.png);
+transform: scaleX(-1);
+    animation: rain 1.2s linear infinite;
+    opacity: 0;
+}
+
+@keyframes rain {
+    0% {
+        background-position: 0 0;
+        opacity: 1;
+    }
+
+    100% {
+        background-position: 0% 80%;
+        opacity: 1;
+    }
+}

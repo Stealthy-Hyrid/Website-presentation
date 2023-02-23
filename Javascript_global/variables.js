@@ -54,11 +54,12 @@ export const Images = new Images_list(
 
 /// General 
 class General {
-  constructor(text, box, body, selected) {
+  constructor(text, box, body, selected,rain) {
     this.text = text;
     this.box = box;
     this.body = body;
     this.selected = selected;
+    this.rain = rain
   }
 }
 
@@ -66,7 +67,8 @@ export const General_settings = new General(
   document.getElementsByClassName("text_settings"),
   document.getElementsByClassName("box_settings"),
   document.body,
-  document.getElementsByClassName("selected_button")
+  document.getElementsByClassName("selected_button"),
+  document.getElementById("rain")
 )
 
 
