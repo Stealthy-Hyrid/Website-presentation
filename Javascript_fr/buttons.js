@@ -30,7 +30,8 @@ function english() {
   index_button_group.forEach((text) => {
     text.addEventListener("click", select_button);
   });
-  
+
+  // Select button
   function select_button() {
   
     /// Display which button is clicked on and reset others
@@ -57,7 +58,8 @@ function english() {
     }
   
   }
-  
+
+  // Reset all other button
   function button_text_reset() {
     index_button_group.forEach((Reset) => {
       Reset.classList.remove("selected_button");
@@ -86,7 +88,8 @@ function english() {
   sub_button_group.forEach((text) => {
     text.addEventListener("click", sub_select_button);
   });
-  
+
+  // Select sub button
   function sub_select_button() {
   
     /// Display which button is clicked on and reset others
@@ -113,7 +116,8 @@ function english() {
     }
   
   }
-  
+
+  // Reset all other sub button
   function sub_button_text_reset() {
     sub_button_group.forEach((Reset) => {
       Reset.classList.remove("selected_button");
@@ -126,6 +130,7 @@ function english() {
     sub_button_group[2].textContent = "Contact";
     
   }
+
 
 /// Hover
 
@@ -140,20 +145,24 @@ const desktop_button_group = [
   Language_settings.english,
 ];
 
-// In
+// Hover In
 desktop_button_group.forEach((text) => {
   text.addEventListener("mouseover", button_mouseover);
 });
 
 function button_mouseover() {
-  this.style.textShadow = "red 1px 2px"
+  if (Images.cat.style.filter == "invert(100%)") {
+    this.style.textShadow = "white 1px 2px";
+  } else {
+    this.style.textShadow = "red 1px 2px";
+  }
 }
 
-// Out
+// Hover Out
 desktop_button_group.forEach((text) => {
   text.addEventListener("mouseout", button_mouseout);
 });
 
 function button_mouseout() {
-  this.style.textShadow = ""
+  this.style.textShadow = "";
 }

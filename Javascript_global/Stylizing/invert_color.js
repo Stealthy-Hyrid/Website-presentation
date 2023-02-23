@@ -1,23 +1,5 @@
-import { General_settings } from "./variables";
-import { Images } from "./variables";
-
-// Switch Dark/Light mode
-
-Images.cat.addEventListener("click", switch_button);
-
-function switch_button() {
-  if (Images.cat.style.filter == "invert(100%)") {
-    dark_mod();
-    General_settings.selected[0].style.color = "yellow";
-    General_settings.selected[1].style.color = "yellow";
-  } else {
-    light_mod();
-    Images.default_bubble.style.visibility="hidden"
-    Images.switched_bubble.style.visibility="visible"
-    General_settings.selected[0].style.color = "white";
-    General_settings.selected[1].style.color = "white";
-  }
-}
+import { General_settings } from "../variables";
+import { Images } from "../variables";
 
 const Logo_list = [
   Images.git_large,
@@ -26,15 +8,35 @@ const Logo_list = [
   Images.linkedin_small,
 ];
 
+/// Switch Dark/Light mode
+
+Images.cat.addEventListener("click", switch_button);
+
+function switch_button() {
+  if (Images.cat.style.filter == "invert(100%)") {
+    dark_mod();
+  } else {
+    light_mod();
+  }
+}
+
+/// Light mod
 function light_mod() {
  
-  // Body + Logo
-  Images.cat.style.filter = "invert(100%)";
-  Images.cat.src = "/Ressource/Image/invert.gif";
-  Images.switched_bubble.src="/Ressource/Image/light_bubble.png"
+  // Bubble
+  Images.default_bubble.style.visibility = "hidden";
+  Images.switched_bubble.style.visibility = "visible";
+  Images.switched_bubble.src = "/Ressource/Image/light_bubble.png";
+
+  // Background
   General_settings.body.style.backgroundImage =
     "url(/Ressource/Image/light.jpg)";
 
+  // Cat
+  Images.cat.style.filter = "invert(100%)";
+  Images.cat.src = "/Ressource/Image/invert.gif";
+
+  // Logo
   for (let i = 0; i < Logo_list.length; i++) {
     Logo_list[i].style.filter = "invert(0%)";
   }
@@ -51,18 +53,27 @@ function light_mod() {
   for (var k = 0; k < General_settings.text.length; k++) {
     General_settings.text[k].style.color = "black";
   }
-}
 
+  for (let i = 0; i < General_settings.selected.length; i++) {
+    General_settings.selected[i].style.color = "white";
+    General_settings.selected[i].style.textShadow = "black 1px 2px";
+  }
+}
+/// Dark mod
 function dark_mod() {
   
-  // Body + Logo
-  Images.cat.style.filter = "invert(0%)";
-  Images.cat.src = "/Ressource/Image/base.gif";
-  Images.switched_bubble.src="/Ressource/Image/dark_bubble.png"
-  
+  // Bubble
+  Images.switched_bubble.src = "/Ressource/Image/dark_bubble.png";
+
+  // Background
   General_settings.body.style.backgroundImage =
     "url(/Ressource/Image/dark.jpg)";
 
+  // Cat
+  Images.cat.style.filter = "invert(0%)";
+  Images.cat.src = "/Ressource/Image/base.gif";
+
+  // Logo
   for (let i = 0; i < Logo_list.length; i++) {
     Logo_list[i].style.filter = "invert(100%)";
   }
@@ -78,5 +89,10 @@ function dark_mod() {
   // Text
   for (let i = 0; i < General_settings.text.length; i++) {
     General_settings.text[i].style.color = "white";
+  }
+
+  for (let i = 0; i < General_settings.selected.length; i++) {
+    General_settings.selected[i].style.color = "yellow";
+    General_settings.selected[i].style.textShadow = "red 1px 2px";
   }
 }
