@@ -1,0 +1,28 @@
+.cat_settings {
+    width: 140px;
+    cursor: pointer;
+    transform: scaleX(-1);
+    animation-delay: 200ms;
+    filter: invert(0%);
+  }
+  
+  .logo_settings {
+    width: 50px;
+    filter: invert(100%);
+  }
+  
+  #default_bubble {
+    visibility: visible;
+    position: absolute;
+    left: 110px;
+    top:10px;
+    width: 200px;
+  }
+  
+  #switched_bubble {
+    visibility: hidden;
+    position: absolute;
+    left: 140px;
+    top:8px;
+    width: 110px;
+  }

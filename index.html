@@ -27,29 +27,32 @@
         <div class="row">
           <div class="col-1 mt-5">
             <img
-              id="logo"
-              class="logo_settings"
+              id="cat_logo"
+              class="cat_settings"
               src="/Ressource/Image/base.gif"
               draggable="false"
             />
           </div>
-          <img id="bubble" src="./Ressource/Image/speech.gif">
+          <img id="default_bubble" src="./Ressource/Image/speech.gif">
+          <img id="switched_bubble" src="">
         </div>
         <!-- Menu row-->
         <div class="row">
-          <!--Large windows menu-->
-          <div class="col-2 popup text-center display_lg">
+
+          <!--Large menu index-->
+          <div class="col-2 popup text-center display_lg" id="menu_group">
             <div
               class="accordion text-center"
               id="accordionExample"
               style="width: 200px"
             >
-              <div class="accordion-item box_settings">
-                <p class="accordion-header" id="headingOne">
-                  <!-- Main button-->
+    
+               <!-- Main index-->
+               <div class="accordion-item box_settings">
+                <p class="accordion-header">
                   <button
-                    class="index_button text_settings"
-                    id="main-btn"
+                  id="main-btn"
+                    class="accordion-button collapsed text_settings"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#main_card"
@@ -58,44 +61,88 @@
                   >
                     Main
                   </button>
+                </p>
+
+                <div
+                  id="main_card"
+                  data-bs-parent="#menu_group"
+                  class="accordion-collapse collapse"
+                >
+                  <div class="accordion-body">
+                    
                   <!-- About button-->
                   <button
-                    class="index_button text_settings"
-                    id="about-btn"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#about_card"
-                    aria-expanded="false"
-                    aria-controls="about_card"
-                  >
-                    About
-                  </button>
-                  <!-- Portfolio button-->
-                  <button
-                    class="index_button text_settings"
-                    id="portfolio-btn"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#portfolio_card"
-                    aria-expanded="false"
-                    aria-controls="portfolio_card"
-                  >
-                    Portfolio
-                  </button>
-                  <!-- Contact button-->
-                  <button
-                    class="index_button text_settings"
-                    id="contact-btn"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#contact_card"
-                    aria-expanded="false"
-                    aria-controls="contact_card"
-                  >
-                    Contact
-                  </button>
-                </p>
+                  class="index_button text_settings"
+                  id="about-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#about_card"
+                  aria-expanded="false"
+                  aria-controls="about_card"
+                >
+                  About
+                </button>
+                <!-- Portfolio button-->
+                <button
+                  class="index_button text_settings"
+                  id="portfolio-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#portfolio_card"
+                  aria-expanded="false"
+                  aria-controls="portfolio_card"
+                >
+                  Portfolio
+                </button>
+                <!-- Contact button-->
+                <button
+                  class="index_button text_settings"
+                  id="contact-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#contact_card"
+                  aria-expanded="false"
+                  aria-controls="contact_card"
+                >
+                  Contact
+                </button>
+                  </div>
+                </div>
               </div>
+              
+              <!--Langage index -->
+               <div class="accordion-item box_settings">
+                <p class="accordion-header">
+                  <button
+                  id="langage-btn"
+                    class="accordion-button collapsed text_settings"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#langage_card"
+                    aria-expanded="false"
+                    aria-controls="langage_card"
+                  >
+                    Languages
+                  </button>
+                  
+                </p>
+                <div
+                  id="langage_card"
+                  data-bs-parent="#menu_group"
+                  class="accordion-collapse collapse"
+                >
+                  <div class="accordion-body">
+                    
+                    <button class="link_button text_settings" id="french">
+                      Français
+                    </button>
+                    <button class="link_button text_settings" id="english">
+                      English
+                    </button>
+                  </div>
+                </div>
+              </div>
+
               <!-- Link button-->
               <div class="accordion-item box_settings">
                 <p class="accordion-header">
@@ -114,56 +161,34 @@
                 </p>
                 <div
                   id="link_card"
+                  data-bs-parent="#menu_group"
                   class="accordion-collapse collapse"
                 >
                   <div class="accordion-body">
                     <button class="link_button text_settings">
                       <a class="text_settings" href="https://github.com/Stealthy-Hyrid" target="_blank">
-                        <img id="git_logo" class="git_logo" src="./Ressource/Image/logo-github.png">
+                        <img id="git_logo" class="logo_settings" src="./Ressource/SVG/github.svg">
                       </a>
                     </button>
-                    <button class="link_button text_settings">LinkedIn</button>
+                    <br>
+                    <button class="link_button text_settings"><a class="text_settings" href="#" target="_blank">
+                      <img id="linkedin_logo" class="logo_settings" src="./Ressource/SVG/linkedin.svg">
+                    </a></button>
                     <button class="link_button text_settings">
                       Curriculum
                     </button>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item box_settings">
-                <p class="accordion-header">
-                  <button
-                  id="link-btn"
-                    class="accordion-button collapsed text_settings"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#language_card"
-                    aria-expanded="false"
-                    aria-controls="language_card"
-                  >
-                    Languages
-                  </button>
-                  
-                </p>
-                <div
-                  id="language_card"
-                  class="accordion-collapse collapse"
-                >
-                  <div class="accordion-body">
-                    
-                    <button class="link_button text_settings" id="french">
-                      Français
-                    </button>
-                    <button class="link_button text_settings" id="english">
-                      English
-                    </button>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
+          
           <!--Small windows menu-->
           <div class="small_menu">
             <div class="accordion display_sm" id="small_accordion_group">
+
+              <!-- Main-->
               <div class="accordion-item box_settings">
                 <h2 class="accordion-header" id="accordion_one">
                   <button
@@ -191,6 +216,8 @@
                   </div>
                 </div>
               </div>
+
+              <!-- About-->
               <div class="accordion-item box_settings">
                 <h2 class="accordion-header" id="accordion_two">
                   <button
@@ -219,6 +246,8 @@
                   </div>
                 </div>
               </div>
+
+              <!--Portfolio-->
               <div class="accordion-item box_settings">
                 <h2 class="accordion-header" id="accordion_three">
                   <button
@@ -250,6 +279,8 @@
                   </div>
                 </div>
               </div>
+
+              <!--Contact-->
               <div class="accordion-item box_settings">
                 <h2 class="accordion-header" id="accordion_four">
                   <button
@@ -281,6 +312,8 @@
                   </div>
                 </div>
               </div>
+
+              <!--Link-->
               <div class="accordion-item box_settings">
                 <h2 class="accordion-header" id="accordion_five">
                   <button
@@ -304,25 +337,21 @@
                   <div class="accordion-body text_settings text-center">
                     <button class="link_button text_settings">
                       <a class="text_settings" href="https://github.com/Stealthy-Hyrid" target="_blank">
-                        <img id="git_logo_small" class="git_logo" src="./Ressource/Image/logo-github.png">
+                        <img id="git_logo_small" class="logo_settings" src="./Ressource/SVG/github.svg">
                       </a>
+                      <button class="link_button text_settings"><a class="text_settings" href="#" target="_blank">
+                        <img id="linkedin_small_logo" class="logo_settings" src="./Ressource/SVG/linkedin.svg">
+                      </a></button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Cards-->
+
+
+          <!-- Desktop cards-->
           <div class="col-10 flex-row-reverse" id="card_group">
-            <!-- Main -->
-            <div
-              class="collapse-vertical collapse col-8 ms-5"
-              id="main_card"
-              data-bs-parent="#card_group"
-            >
-              <div class="card card-body card_settings box_settings">
-                <p>a</p>
-              </div>
-            </div>
+
 
             <!-- About me-->
             <div
@@ -345,6 +374,7 @@
                 <p>c</p>
               </div>
             </div>
+            
             <!-- Contact me-->
             <div
               class="collapse-vertical collapse col-8 ms-5"
@@ -355,6 +385,7 @@
                 <p>d</p>
               </div>
             </div>
+
           </div>
         </div>
       </div>

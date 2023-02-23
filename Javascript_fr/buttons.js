@@ -12,17 +12,14 @@ function french() {
 
 Language_settings.english.addEventListener("click", english);
 function english() {
-  location.replace('index_en.html')
+  location.replace('index.html')
 }
 
-
-/// Color switch
-
-const button_group = [
+  /// Menu index buttons
+  const index_button_group = [
     Desktop_buttons.main,
-    Desktop_buttons.about,
-    Desktop_buttons.portfolio,
-    Desktop_buttons.contact,
+    Desktop_buttons.langage,
+    Desktop_buttons.link,
     Mobile_buttons.main,
     Mobile_buttons.about,
     Mobile_buttons.portfolio,
@@ -30,28 +27,31 @@ const button_group = [
     Mobile_buttons.link
   ];
   
-  button_group.forEach((text) => {
+  index_button_group.forEach((text) => {
     text.addEventListener("click", select_button);
   });
   
-  
   function select_button() {
   
+    /// Display which button is clicked on and reset others
      if (!this.classList.contains("selected_button")) {
       button_text_reset();
       this.textContent = "> " + this.textContent + " <";
       this.classList.add("selected_button");
       this.disabled=true
   
+      /// Invert menu buttons color based of Dark/Light mod
       if (Images.cat.style.filter == "invert(100%)") {
-        for (let i = 0; i < button_group.length; i++) {
-          button_group[i].style.color = "black";
+        for (let i = 0; i < index_button_group.length; i++) {
+          index_button_group[i].style.color = "black";
         }
-        this.style.color = "red";
+        this.style.color = "white";
+        this.style.textShadow="black 1px 2px"
       } else {
-        for (let i = 0; i < button_group.length; i++) {
-          button_group[i].style.color = "white";
+        for (let i = 0; i < index_button_group.length; i++) {
+          index_button_group[i].style.color = "white";
         }
+        this.style.textShadow="red 1px 2px"
         this.style.color = "yellow";
       }
     }
@@ -59,18 +59,101 @@ const button_group = [
   }
   
   function button_text_reset() {
-    button_group.forEach((DeleteClass) => {
-      DeleteClass.classList.remove("selected_button");
-      DeleteClass.disabled=false
+    index_button_group.forEach((Reset) => {
+      Reset.classList.remove("selected_button");
+      Reset.disabled=false
+      Reset.style.textShadow= ""
     });
-    button_group[0].textContent = "Accueil";
-    button_group[4].textContent = "Accueil";
-    button_group[1].textContent = "Présentation";
-    button_group[5].textContent = "Présentation";
-    button_group[2].textContent = "Portfolio";
-    button_group[6].textContent = "Portfolio";
-    button_group[3].textContent = "Contact";
-    button_group[7].textContent = "Contact";
-    button_group[8].textContent = "Liens";
+
+    index_button_group[0].textContent = "Index";
+    index_button_group[1].textContent = "Langues";
+    index_button_group[2].textContent = "Liens";
+    index_button_group[3].textContent = "Index";
+    index_button_group[4].textContent = "Présentation";
+    index_button_group[5].textContent = "Portfolio";
+    index_button_group[6].textContent = "Contact";
+    index_button_group[7].textContent = "Liens";
+    
+  }
+
+   /// Menu index sub buttons
+   const sub_button_group = [
+    Desktop_buttons.about,
+    Desktop_buttons.portfolio,
+    Desktop_buttons.contact,
+  ];
+  
+  sub_button_group.forEach((text) => {
+    text.addEventListener("click", sub_select_button);
+  });
+  
+  function sub_select_button() {
+  
+    /// Display which button is clicked on and reset others
+     if (!this.classList.contains("selected_button")) {
+      sub_button_text_reset();
+      this.textContent = "> " + this.textContent;
+      this.classList.add("selected_button");
+      this.disabled=true
+  
+      /// Invert menu buttons color based of Dark/Light mod
+      if (Images.cat.style.filter == "invert(100%)") {
+        for (let i = 0; i < sub_button_group.length; i++) {
+          sub_button_group[i].style.color = "black";
+        }
+        this.style.color = "white";
+        this.style.textShadow="black 1px 2px"
+      } else {
+        for (let i = 0; i < sub_button_group.length; i++) {
+          sub_button_group[i].style.color = "white";
+        }
+        this.style.textShadow="red 1px 2px"
+        this.style.color = "yellow";
+      }
+    }
+  
   }
   
+  function sub_button_text_reset() {
+    sub_button_group.forEach((Reset) => {
+      Reset.classList.remove("selected_button");
+      Reset.disabled=false
+      Reset.style.textShadow= ""
+    });
+
+    sub_button_group[0].textContent = "Présentation";
+    sub_button_group[1].textContent = "Portfolio";
+    sub_button_group[2].textContent = "Contact";
+    
+  }
+
+/// Hover
+
+const desktop_button_group = [
+  Desktop_buttons.main,
+  Desktop_buttons.about,
+  Desktop_buttons.portfolio,
+  Desktop_buttons.contact,
+  Desktop_buttons.langage,
+  Desktop_buttons.link,
+  Language_settings.french,
+  Language_settings.english,
+];
+
+// In
+desktop_button_group.forEach((text) => {
+  text.addEventListener("mouseover", button_mouseover);
+});
+
+function button_mouseover() {
+  this.style.textShadow = "red 1px 2px"
+}
+
+// Out
+desktop_button_group.forEach((text) => {
+  text.addEventListener("mouseout", button_mouseout);
+});
+
+function button_mouseout() {
+  this.style.textShadow = ""
+}

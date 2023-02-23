@@ -1,9 +1,5 @@
 /* Base Buttons */
 
-button:hover {
-    text-shadow: white 0px 0 10px;
-  }
-  
   button:focus {
     outline: none;
     box-shadow: none !important;
@@ -16,9 +12,7 @@ button:hover {
     margin: 10px 0px;
   }
   
-  .index_button {
-    width: 200px;
-  }
+ 
   
   /* Accordion button */
   

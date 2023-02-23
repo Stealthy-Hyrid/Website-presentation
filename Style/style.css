@@ -6,22 +6,3 @@ body {
   
 }
 
-.logo_settings {
-  width: 140px;
-  cursor: pointer;
-  transform: scaleX(-1);
-  animation-delay: 200ms;
-  filter: invert(0%);
-}
-
-.git_logo {
-  width: 50px;
-  filter: invert(100%);
-}
-
-#bubble {
-  position: absolute;
-  left: 110px;
-  top:10px;
-  width: 200px;
-}
