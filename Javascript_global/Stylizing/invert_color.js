@@ -64,6 +64,7 @@ function light_mod() {
     General_settings.selected[i].style.color = "white";
     General_settings.selected[i].style.textShadow = "black 1px 2px";
   }
+  
 }
 /// Dark mod
 function dark_mod() {

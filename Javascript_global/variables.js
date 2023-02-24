@@ -27,11 +27,12 @@ export const Mobile_buttons = new Buttons(
   document.getElementById("portfolio_mobile"), 
   document.getElementById("contact_mobile"),
   document.getElementById("link_mobile")
+ 
 );
 
 /// Images
 class Images_list  {
-    constructor(cat,git_large,git_small, linkedin_large, linkedin_small, default_bubble, switched_bubble){
+    constructor(cat,git_large,git_small, linkedin_large, linkedin_small, default_bubble, switched_bubble, mobile_french_btn, mobile_english_btn){
         this.cat = cat;
         this.git_large = git_large;
         this.git_small = git_small;
@@ -50,16 +51,18 @@ export const Images = new Images_list(
     document.getElementById("linkedin_small_logo"),
     document.getElementById("default_bubble"),
     document.getElementById("switched_bubble")
+   
 )
 
 /// General 
 class General {
-  constructor(text, box, body, selected,rain) {
+  constructor(text, box, body, selected,sub_selected,rain) {
     this.text = text;
     this.box = box;
     this.body = body;
     this.selected = selected;
-    this.rain = rain
+    this.sub_selected = sub_selected;
+    this.rain = rain;
   }
 }
 
@@ -68,18 +71,24 @@ export const General_settings = new General(
   document.getElementsByClassName("box_settings"),
   document.body,
   document.getElementsByClassName("selected_button"),
+  document.getElementsByClassName("sub_selected_button"),
   document.getElementById("rain")
 )
 
 
-class Language {
-  constructor(french, english) {
+class Language_button {
+  constructor(french, english,mobile_french,mobile_english) {
     this.french = french;
     this.english = english;
+    this.mobile_french = mobile_french;
+    this.mobile_english = mobile_english;
   }
 }
 
-export const Language_settings = new Language(
-  document.getElementById("french"),
-  document.getElementById("english")
+export const Language_settings = new Language_button(
+  document.getElementById("switch_french"),
+  document.getElementById("switch_english"),
+  document.getElementById("flag_fr"),
+  document.getElementById("flag_en")
+  
   )

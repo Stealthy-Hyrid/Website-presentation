@@ -18,3 +18,10 @@
     margin-left: 50px;
   }
   
+   .mobile_language {
+    position:absolute;
+    width: 110px;
+    top: 10px;
+    right : 20px;
+    padding: 0px;
+  }

@@ -26,3 +26,12 @@
     top:8px;
     width: 110px;
   }
+
+  .mobile_flag {
+    cursor: pointer;
+    width: 35px;
+    border: 1px solid white;
+    margin-left: 10px;
+  }
+
+  
