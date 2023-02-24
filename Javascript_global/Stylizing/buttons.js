@@ -1,14 +1,14 @@
-import { Images } from "../Javascript_global/variables";
-import { Desktop_buttons } from "../Javascript_global/variables";
-import { Mobile_buttons } from "../Javascript_global/variables";
-import { Language_settings } from "../Javascript_global/variables";
+import { Images } from "../variables";
+import { Desktop_buttons } from "../variables";
+import { Mobile_buttons } from "../variables";
+import { Language_settings } from "../variables";
 
 /// Language
 
-Language_settings.french.addEventListener("click", french);
+/* Language_settings.french.addEventListener("click", french);
 function french() {
   location.replace("index_fr.html");
-}
+} */
 
 Language_settings.english.addEventListener("click", english);
 function english() {
