@@ -32,13 +32,26 @@ sub_button_group.forEach((text) => {
 /// Select button
 
 function select_button() {
-  button_text_reset();
+  
+  // Checking if re-click
+  if (this.classList.contains("selected_button")) {
+    this.classList.remove("sub_selected_button");
+    
+    if (Images.cat.style.filter == "invert(100%)") {
+      this.style.color="black"
+    } else {
+      this.style.color="white"
+    }
+    button_text_reset();
+  } else {
 
-  /// Display which button is clicked on and reset others
-  if (!this.classList.contains("selected_button")) {
+    // Reset
+    button_text_reset();
+
+    /// Display which button is clicked on and reset others
+
     this.textContent = "> " + this.textContent + " <";
     this.classList.add("selected_button");
-    this.disabled = true;
 
     /// Invert menu buttons color based of Dark/Light mod
     if (Images.cat.style.filter == "invert(100%)") {
@@ -57,12 +70,25 @@ function select_button() {
   }
 }
 function select_sub_button() {
-  /// Display which button is clicked on and reset others
-  if (!this.classList.contains("sub_selected_button")) {
+ 
+  // Checking if re-click
+  if (this.classList.contains("sub_selected_button")) {
+    this.classList.remove("sub_selected_button");
+    if (Images.cat.style.filter == "invert(100%)") {
+      this.style.color="black"
+    } else {
+      this.style.color="white"
+    }
+
     sub_button_text_reset();
+  } else {
+
+    // Reset
+    sub_button_text_reset();
+
+    /// Display which button is clicked on and reset others
     this.textContent = "> " + this.textContent;
     this.classList.add("sub_selected_button");
-    this.disabled = true;
 
     /// Invert menu buttons color based of Dark/Light mod
     if (Images.cat.style.filter == "invert(100%)") {
@@ -86,7 +112,7 @@ function select_sub_button() {
 export function sub_button_text_reset() {
   sub_button_group.forEach((Reset) => {
     Reset.classList.remove("sub_selected_button");
-    Reset.disabled = false;
+
     Reset.style.textShadow = "";
   });
   if (CurrLang == "fr") {
@@ -102,7 +128,6 @@ export function sub_button_text_reset() {
 export function button_text_reset() {
   index_button_group.forEach((Reset) => {
     Reset.classList.remove("selected_button");
-    Reset.disabled = false;
     Reset.style.textShadow = "";
   });
 

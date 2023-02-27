@@ -14,19 +14,11 @@
   #default_bubble {
     visibility: visible;
     position: absolute;
-    left: 110px;
+    left: 100px;
     top:10px;
     width: 200px;
   }
   
-  #switched_bubble {
-    visibility: hidden;
-    position: absolute;
-    left: 140px;
-    top:8px;
-    width: 110px;
-  }
-
   .mobile_flag {
     cursor: pointer;
     width: 35px;

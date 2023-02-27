@@ -1,4 +1,3 @@
-
 /// Buttons
 class Buttons {
   constructor(main, about, portfolio, contact, link, langage) {
@@ -7,7 +6,7 @@ class Buttons {
     this.portfolio = portfolio;
     this.contact = contact;
     this.link = link;
-    this.langage = langage
+    this.langage = langage;
   }
 }
 
@@ -18,51 +17,56 @@ export const Desktop_buttons = new Buttons(
   document.getElementById("contact-btn"),
   document.getElementById("link-btn"),
   document.getElementById("langage-btn")
-  
 );
 
 export const Mobile_buttons = new Buttons(
   document.getElementById("main_mobile"),
   document.getElementById("about_mobile"),
-  document.getElementById("portfolio_mobile"), 
+  document.getElementById("portfolio_mobile"),
   document.getElementById("contact_mobile"),
   document.getElementById("link_mobile")
- 
 );
 
 /// Images
-class Images_list  {
-    constructor(cat,git_large,git_small, linkedin_large, linkedin_small, default_bubble, switched_bubble, mobile_french_btn, mobile_english_btn){
-        this.cat = cat;
-        this.git_large = git_large;
-        this.git_small = git_small;
-        this.linkedin_large = linkedin_large;
-        this.linkedin_small = linkedin_small;
-        this.default_bubble = default_bubble;
-        this.switched_bubble = switched_bubble;
-    }
+class Images_list {
+  constructor(
+    cat,
+    git_large,
+    git_small,
+    linkedin_large,
+    linkedin_small,
+    default_bubble,
+    switched_bubble,
+  ) {
+    this.cat = cat;
+    this.git_large = git_large;
+    this.git_small = git_small;
+    this.linkedin_large = linkedin_large;
+    this.linkedin_small = linkedin_small;
+    this.default_bubble = default_bubble;
+    this.switched_bubble = switched_bubble;
+  }
 }
 
 export const Images = new Images_list(
-    document.getElementById("cat_logo"),
-    document.getElementById("git_logo"),
-    document.getElementById("git_logo_small"),
-    document.getElementById("linkedin_logo"),
-    document.getElementById("linkedin_small_logo"),
-    document.getElementById("default_bubble"),
-    document.getElementById("switched_bubble")
-   
-)
+  document.getElementById("cat_logo"),
+  document.getElementById("git_logo"),
+  document.getElementById("git_logo_small"),
+  document.getElementById("linkedin_logo"),
+  document.getElementById("linkedin_small_logo"),
+  document.getElementById("default_bubble"),
+  document.getElementById("switched_bubble")
+);
 
-/// General 
+/// General
 class General {
-  constructor(text, box, body, selected,sub_selected,selected_lang,rain) {
+  constructor(text, box, body, selected, sub_selected, selected_lang, rain) {
     this.text = text;
     this.box = box;
     this.body = body;
     this.selected = selected;
     this.sub_selected = sub_selected;
-    this.selected_lang = selected_lang
+    this.selected_lang = selected_lang;
     this.rain = rain;
   }
 }
@@ -75,17 +79,23 @@ export const General_settings = new General(
   document.getElementsByClassName("sub_selected_button"),
   document.getElementsByClassName("selected_lang"),
   document.getElementById("rain")
-)
-
+);
 
 class Language_button {
-  constructor(french_button, english_button,mobile_french_button,mobile_english_button, french_text, english_text) {
+  constructor(
+    french_button,
+    english_button,
+    mobile_french_button,
+    mobile_english_button,
+    french_text,
+    english_text
+  ) {
     this.french_button = french_button;
     this.english_button = english_button;
     this.mobile_french_button = mobile_french_button;
     this.mobile_english_button = mobile_english_button;
     this.french_text = french_text;
-    this.english_text = english_text
+    this.english_text = english_text;
   }
 }
 
@@ -96,5 +106,4 @@ export const Language_settings = new Language_button(
   document.getElementById("flag_en"),
   document.getElementsByClassName("fr"),
   document.getElementsByClassName("en")
-  
-  )
+);

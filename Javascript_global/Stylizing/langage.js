@@ -3,26 +3,28 @@ import { lang_select_button } from "./buttons";
 
 export let CurrLang = "en";
 
-/// Check current language
-if (CurrLang == "en") {
-  for (let i = 0; i < Language_settings.french_text.length; i++) {
-    Language_settings.french_text[i].style.display = "none";
-
-    for (let i = 0; i < Language_settings.english_text.length; i++) {
-      Language_settings.english_text[i].style.display = "unset";
-    }
-  }
-} else if (CurrLang == "fr") {
-  for (let i = 0; i < Language_settings.english_text.length; i++) {
-    Language_settings.english_text[i].style.display = "none";
-  }
-
-  for (let i = 0; i < Language_settings.french_text.length; i++) {
-    Language_settings.french_text[i].style.display = "unset";
-  }
-}
 
 /// Buttons translation
+
+function lang() {
+  if (CurrLang == "en") {
+    for (let i = 0; i < Language_settings.french_text.length; i++) {
+      Language_settings.french_text[i].style.display = "none";
+  
+      for (let i = 0; i < Language_settings.english_text.length; i++) {
+        Language_settings.english_text[i].style.display = "unset";
+      }
+    }
+  } else if (CurrLang == "fr") {
+    for (let i = 0; i < Language_settings.english_text.length; i++) {
+      Language_settings.english_text[i].style.display = "none";
+    }
+  
+    for (let i = 0; i < Language_settings.french_text.length; i++) {
+      Language_settings.french_text[i].style.display = "unset";
+    }
+  }
+}
 
 // Fr 
 Language_settings.french_button.addEventListener("click", french);
@@ -30,13 +32,15 @@ Language_settings.mobile_french_button.addEventListener("click", french);
 
 function french() {
   CurrLang = "fr";
-
+  lang()
   lang_select_button();
   select_mark();
 
   // Switch Bubble language
   Images.default_bubble.src = "/Ressource/Image/speech_fr.gif";
-  Images.default_bubble.style.width = "220px";
+  Images.default_bubble.style.width = "250px";
+  Images.default_bubble.style.left = "85px";
+  Images.default_bubble.style.top = "7px";
 
   // Lang button coloring
 
@@ -58,13 +62,16 @@ Language_settings.mobile_english_button.addEventListener("click", english);
 
 function english() {
   CurrLang = "en";
-
+  
+  lang()
   lang_select_button();
   select_mark();
 
   // Switch Bubble language
-  Images.default_bubble.style.width = "200px";
   Images.default_bubble.src = "/Ressource/Image/speech.gif";
+  Images.default_bubble.style.width = "200px";
+  Images.default_bubble.style.left = "100px"
+  Images.default_bubble.style.top = "10px"
 
   // Lang button coloring
   Language_settings.french_button.classList.remove("selected_lang");
@@ -80,6 +87,7 @@ function english() {
 }
 
 // Keep the button select style after switching
+
 function select_mark() {
   if (General_settings.selected[0]) {
     General_settings.selected[0].textContent =
