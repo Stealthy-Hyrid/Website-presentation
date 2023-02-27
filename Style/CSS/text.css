@@ -9,12 +9,11 @@ body {
 
   .text_settings {
     color: white;
-    text-decoration: none;
-    
+    text-decoration: none; 
   }
 
   .card_text_settings {
-    font-size: 20px;
+    font-size: 25px;
   }
   
   .display_lg, .accordion-button {

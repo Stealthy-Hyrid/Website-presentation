@@ -93,6 +93,7 @@
                  <span class="en"> About</span>
                  <span class="fr"> Présentation</span>
                 </button>
+
                 <!-- Portfolio button-->
                 <button
                   class="index_button text_settings"
@@ -105,6 +106,7 @@
                 >
                   Portfolio
                 </button>
+
                 <!-- Contact button-->
                 <button
                   class="index_button text_settings"
@@ -116,6 +118,19 @@
                   aria-controls="contact_card"
                 >
                   Contact
+                </button>
+
+                <!--Ressource button-->
+                <button
+                  class="index_button text_settings"
+                  id="ressource-btn"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#ressource_card"
+                  aria-expanded="false"
+                  aria-controls="ressource_card"
+                >
+                  Ressource
                 </button>
                   </div>
                 </div>
@@ -184,7 +199,7 @@
                       </a>
                     </button>
                     <br>
-                    <button class="link_button text_settings"><a class="text_settings" href="#" target="_blank">
+                    <button class="link_button text_settings"><a class="text_settings" href="https://www.linkedin.com/in/kevin-leblanc-145ba2267/" target="_blank">
                       <img id="linkedin_logo" class="logo_settings" src="./Ressource/SVG/linkedin.svg">
                     </a></button>
                     <button class="link_button text_settings">
@@ -328,26 +343,65 @@
                 </div>
               </div>
 
-              <!--Link-->
               <div class="accordion-item box_settings">
                 <h2 class="accordion-header" id="accordion_five">
+                  <button
+                    class="accordion-button collapsed text_settings"
+                    id ="ressource_mobile"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    <span> Ressource</span>
+                    
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="accordion_five"
+                  data-bs-parent="#small_accordion_group"
+                >
+                  <div class="accordion-body text_settings px-4">
+                    <div class="en">
+                      <p>I'm using these background images to fill the void but I don't own any rights on the background images. </p>
+                      <p>Unfortunaly due to all the various websites like Pinterest, I can't seem find the original artists to credit or ask for permission. </p>
+                      <p>If the original artists happens to see this and want your art removed, you can contact me and I will do it.  </p>
+                    </div>
+
+                    <div class="fr">
+                      <p>J'utilise ces images de fond afin de remplir le vide mais je ne detiens aucun droit d'auteur.</p>
+                      <p>Malheureusement à cause des sites comme Pinterest, je n'arrive pas à trouver les artistes originaux afin de les créditer ou leur demander la permission d'utiliser leurs images.</p>
+                      <p>Donc si jamais les artistes originaux tombent sur ce site et souhaitent que je supprime ces images, vous pouvez me contacter et je m'en occuperais. </p>
+                    
+                    </div >
+                  </div>
+                </div>
+              </div>
+              
+
+              <!--Link-->
+              <div class="accordion-item box_settings">
+                <h2 class="accordion-header" id="accordion_six">
                   <button
                     class="accordion-button collapsed text_settings"
                     id ="link_mobile"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#collapsefive"
+                    data-bs-target="#collapseSix"
                     aria-expanded="false"
-                    aria-controls="collapsefive"
+                    aria-controls="collapseSix"
                   >
                     <span class="en">Links</span>
                     <span class="fr">Liens</span>
                   </button>
                 </h2>
                 <div
-                  id="collapsefive"
+                  id="collapseSix"
                   class="accordion-collapse collapse"
-                  aria-labelledby="accordion_five"
+                  aria-labelledby="accordion_Six"
                   data-bs-parent="#small_accordion_group"
                 >
                   <div class="accordion-body text_settings text-center">
@@ -355,7 +409,7 @@
                       <a class="text_settings" href="https://github.com/Stealthy-Hyrid" target="_blank">
                         <img id="git_logo_small" class="logo_settings" src="./Ressource/SVG/github.svg">
                       </a>
-                      <button class="link_button text_settings"><a class="text_settings" href="#" target="_blank">
+                      <button class="link_button text_settings"><a class="text_settings" href="https://www.linkedin.com/in/kevin-leblanc-145ba2267/" target="_blank">
                         <img id="linkedin_small_logo" class="logo_settings" src="./Ressource/SVG/linkedin.svg">
                       </a></button>
                   </div>
@@ -425,6 +479,32 @@
                 </div>
               </div>
               </div>
+
+              <!-- Ressources-->
+              <div
+              class="collapse-vertical collapse col-8 ms-5"
+              id="ressource_card"
+              data-bs-parent="#card_group"
+            >
+              <div class="card card-body card_settings box_settings">
+                <div class="row card_text_settings">
+                  <h1 class="text-center mt-3 mb-5"> Ressources</h1>
+                  <div class="px-5">
+                    <div class="mt-3 en">
+                      <p class="mb-3">I'm using these background images to fill the void but I don't own any rights on the background images. </p>
+                      <p class="mb-3">Unfortunaly due to all the various websites like Pinterest, I can't seem find the original artists to credit or ask for permission. </p>
+                      <p>If the original artists happens to see this and want your art removed, you can contact me and I will do it.  </p>
+                    </div>
+                    <div class="mt-3 fr">
+                      <p class="mb-3">J'utilise ces images de fond afin de remplir le vide mais je ne detiens aucun droit d'auteur.</p>
+                      <p class="mb-3">Malheureusement à cause des sites comme Pinterest, je n'arrive pas à trouver les artistes originaux afin de les créditer ou leur demander la permission d'utiliser leurs images.</p>
+                      <p>Donc si jamais les artistes originaux tombent sur ce site et souhaitent que je supprime ces images, vous pouvez me contacter et je m'en occuperais. </p>
+                    
+                    </div >
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
 
           </div>

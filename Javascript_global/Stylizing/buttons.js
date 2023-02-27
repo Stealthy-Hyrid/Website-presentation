@@ -14,11 +14,13 @@ const index_button_group = [
   Mobile_buttons.portfolio,
   Mobile_buttons.contact,
   Mobile_buttons.link,
+  Mobile_buttons.ressource,
 ];
 const sub_button_group = [
   Desktop_buttons.about,
   Desktop_buttons.portfolio,
   Desktop_buttons.contact,
+  Desktop_buttons.ressource,
 ];
 
 index_button_group.forEach((text) => {
@@ -32,19 +34,17 @@ sub_button_group.forEach((text) => {
 /// Select button
 
 function select_button() {
-  
   // Checking if re-click
   if (this.classList.contains("selected_button")) {
     this.classList.remove("sub_selected_button");
-    
+
     if (Images.cat.style.filter == "invert(100%)") {
-      this.style.color="black"
+      this.style.color = "black";
     } else {
-      this.style.color="white"
+      this.style.color = "white";
     }
     button_text_reset();
   } else {
-
     // Reset
     button_text_reset();
 
@@ -70,19 +70,17 @@ function select_button() {
   }
 }
 function select_sub_button() {
- 
   // Checking if re-click
   if (this.classList.contains("sub_selected_button")) {
     this.classList.remove("sub_selected_button");
     if (Images.cat.style.filter == "invert(100%)") {
-      this.style.color="black"
+      this.style.color = "black";
     } else {
-      this.style.color="white"
+      this.style.color = "white";
     }
 
     sub_button_text_reset();
   } else {
-
     // Reset
     sub_button_text_reset();
 
@@ -124,6 +122,7 @@ export function sub_button_text_reset() {
     sub_button_group[1].textContent = "Portfolio";
     sub_button_group[2].textContent = "Contact";
   }
+  sub_button_group[3].textContent = "Ressource";
 }
 export function button_text_reset() {
   index_button_group.forEach((Reset) => {
@@ -133,23 +132,26 @@ export function button_text_reset() {
 
   if (CurrLang == "fr") {
     index_button_group[0].textContent = "Index";
-    index_button_group[1].textContent = "Langue";
-    index_button_group[2].textContent = "Liens";
     index_button_group[3].textContent = "Index";
+    index_button_group[1].textContent = "Langue";
     index_button_group[4].textContent = "Présentation";
-    index_button_group[5].textContent = "Portfolio";
-    index_button_group[6].textContent = "Contact";
+    index_button_group[2].textContent = "Liens";
     index_button_group[7].textContent = "Liens";
   } else if (CurrLang == "en") {
     index_button_group[0].textContent = "Main";
-    index_button_group[1].textContent = "Language";
-    index_button_group[2].textContent = "Links";
     index_button_group[3].textContent = "Main";
     index_button_group[4].textContent = "About";
-    index_button_group[5].textContent = "Portfolio";
-    index_button_group[6].textContent = "Contact";
+    index_button_group[1].textContent = "Language";
+    index_button_group[2].textContent = "Links";
     index_button_group[7].textContent = "Links";
   }
+
+  index_button_group[5].textContent = "Portfolio";
+  index_button_group[5].textContent = "Portfolio";
+  index_button_group[6].textContent = "Contact";
+  index_button_group[6].textContent = "Contact";
+  index_button_group[8].textContent = "Ressource";
+  sub_button_group[3].textContent = "Ressource";
 }
 
 /// Language switch for selected buttons
@@ -157,29 +159,28 @@ export function button_text_reset() {
 export function lang_select_button() {
   if (CurrLang == "fr") {
     index_button_group[0].textContent = "Index";
-    index_button_group[1].textContent = "Langue";
-    index_button_group[2].textContent = "Liens";
     index_button_group[3].textContent = "Index";
+    index_button_group[1].textContent = "Langue";
     index_button_group[4].textContent = "Présentation";
-    index_button_group[5].textContent = "Portfolio";
-    index_button_group[6].textContent = "Contact";
-    index_button_group[7].textContent = "Liens";
     sub_button_group[0].textContent = "Présentation";
-    sub_button_group[1].textContent = "Portfolio";
-    sub_button_group[2].textContent = "Contact";
+    index_button_group[2].textContent = "Liens";
+    index_button_group[7].textContent = "Liens";
   } else if (CurrLang == "en") {
     index_button_group[0].textContent = "Main";
-    index_button_group[1].textContent = "Language";
-    index_button_group[2].textContent = "Links";
     index_button_group[3].textContent = "Main";
     index_button_group[4].textContent = "About";
-    index_button_group[5].textContent = "Portfolio";
-    index_button_group[6].textContent = "Contact";
-    index_button_group[7].textContent = "Links";
     sub_button_group[0].textContent = "About";
-    sub_button_group[1].textContent = "Portfolio";
-    sub_button_group[2].textContent = "Contact";
+    index_button_group[1].textContent = "Language";
+    index_button_group[2].textContent = "Links";
+    index_button_group[7].textContent = "Links";
   }
+
+  index_button_group[8].textContent = "Ressource";
+  sub_button_group[3].textContent = "Ressource";
+  sub_button_group[1].textContent = "Portfolio";
+  index_button_group[5].textContent = "Portfolio";
+  sub_button_group[2].textContent = "Contact";
+  index_button_group[6].textContent = "Contact";
 }
 
 /// Button hover stylizing
@@ -191,6 +192,7 @@ const desktop_button_group = [
   Desktop_buttons.contact,
   Desktop_buttons.langage,
   Desktop_buttons.link,
+  Desktop_buttons.ressource,
   Language_settings.french_button,
   Language_settings.english_button,
 ];

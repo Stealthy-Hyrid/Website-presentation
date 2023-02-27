@@ -1,12 +1,13 @@
 /// Buttons
 class Buttons {
-  constructor(main, about, portfolio, contact, link, langage) {
+  constructor(main, about, portfolio, contact, link, ressource, langage) {
     this.main = main;
     this.about = about;
     this.portfolio = portfolio;
     this.contact = contact;
     this.link = link;
     this.langage = langage;
+    this.ressource = ressource
   }
 }
 
@@ -16,6 +17,7 @@ export const Desktop_buttons = new Buttons(
   document.getElementById("portfolio-btn"),
   document.getElementById("contact-btn"),
   document.getElementById("link-btn"),
+  document.getElementById("ressource-btn"),
   document.getElementById("langage-btn")
 );
 
@@ -24,7 +26,8 @@ export const Mobile_buttons = new Buttons(
   document.getElementById("about_mobile"),
   document.getElementById("portfolio_mobile"),
   document.getElementById("contact_mobile"),
-  document.getElementById("link_mobile")
+  document.getElementById("link_mobile"),
+  document.getElementById("ressource_mobile")
 );
 
 /// Images
