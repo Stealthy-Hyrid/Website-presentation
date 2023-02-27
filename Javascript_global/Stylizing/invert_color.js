@@ -1,4 +1,4 @@
-import { General_settings } from "../variables";
+import { General_settings, Language_settings } from "../variables";
 import { Images } from "../variables";
 
 const Logo_list = [
@@ -21,18 +21,18 @@ function switch_button() {
 }
 
 /// Light mod
+
 function light_mod() {
- 
   // Rain effect
-  General_settings.rain.style.visibility= "hidden"
+  General_settings.rain.style.visibility = "hidden";
 
   // Default bubble
   Images.default_bubble.style.visibility = "hidden";
- 
+
   // Light mod bubble
   Images.switched_bubble.style.visibility = "visible";
   Images.switched_bubble.src = "/Ressource/Image/light_bubble.gif";
-  Images.switched_bubble.style.filter="invert(0%)"
+  Images.switched_bubble.style.filter = "invert(0%)";
 
   // Background
   General_settings.body.style.backgroundImage =
@@ -56,7 +56,7 @@ function light_mod() {
   }
 
   // Text
-  for (var i= 0; i < General_settings.text.length; i++) {
+  for (var i = 0; i < General_settings.text.length; i++) {
     General_settings.text[i].style.color = "black";
   }
 
@@ -64,16 +64,19 @@ function light_mod() {
     General_settings.selected[i].style.color = "white";
     General_settings.selected[i].style.textShadow = "black 1px 2px";
   }
-  
+  // Langue button
+
+  General_settings.selected_lang[0].style.color = "green";
 }
 /// Dark mod
+
 function dark_mod() {
-  
   // Rain effect
-  General_settings.rain.style.visibility= "visible"
+  General_settings.rain.style.visibility = "visible";
+
   // Dark mod bubble
   Images.switched_bubble.src = "/Ressource/Image/dark_bubble.gif";
-  Images.switched_bubble.style.filter="invert(100%)"
+  Images.switched_bubble.style.filter = "invert(100%)";
 
   // Background
   General_settings.body.style.backgroundImage =
@@ -105,4 +108,8 @@ function dark_mod() {
     General_settings.selected[i].style.color = "yellow";
     General_settings.selected[i].style.textShadow = "red 1px 2px";
   }
+
+  // Langue button
+
+  General_settings.selected_lang[0].style.color = "palevioletred";
 }

@@ -24,3 +24,7 @@ body {
   #switch_english {
     color: palevioletred;
   }
+
+  .fr {
+    display:none
+  }

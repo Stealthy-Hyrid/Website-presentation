@@ -56,12 +56,13 @@ export const Images = new Images_list(
 
 /// General 
 class General {
-  constructor(text, box, body, selected,sub_selected,rain) {
+  constructor(text, box, body, selected,sub_selected,selected_lang,rain) {
     this.text = text;
     this.box = box;
     this.body = body;
     this.selected = selected;
     this.sub_selected = sub_selected;
+    this.selected_lang = selected_lang
     this.rain = rain;
   }
 }
@@ -72,16 +73,19 @@ export const General_settings = new General(
   document.body,
   document.getElementsByClassName("selected_button"),
   document.getElementsByClassName("sub_selected_button"),
+  document.getElementsByClassName("selected_lang"),
   document.getElementById("rain")
 )
 
 
 class Language_button {
-  constructor(french, english,mobile_french,mobile_english) {
-    this.french = french;
-    this.english = english;
-    this.mobile_french = mobile_french;
-    this.mobile_english = mobile_english;
+  constructor(french_button, english_button,mobile_french_button,mobile_english_button, french_text, english_text) {
+    this.french_button = french_button;
+    this.english_button = english_button;
+    this.mobile_french_button = mobile_french_button;
+    this.mobile_english_button = mobile_english_button;
+    this.french_text = french_text;
+    this.english_text = english_text
   }
 }
 
@@ -89,6 +93,8 @@ export const Language_settings = new Language_button(
   document.getElementById("switch_french"),
   document.getElementById("switch_english"),
   document.getElementById("flag_fr"),
-  document.getElementById("flag_en")
+  document.getElementById("flag_en"),
+  document.getElementsByClassName("fr"),
+  document.getElementsByClassName("en")
   
   )
