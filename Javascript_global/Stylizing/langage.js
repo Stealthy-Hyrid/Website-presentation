@@ -1,12 +1,5 @@
-import {
-  Language_settings,
-  Mobile_buttons,
-  Desktop_buttons,
-  General_settings,
-  Images,
-} from "../variables";
-
-import { lang } from "./buttons";
+import { Language_settings, General_settings, Images } from "../Global_settings/variables";
+import { lang_select_button } from "./buttons";
 
 export let CurrLang = "en";
 
@@ -31,18 +24,14 @@ if (CurrLang == "en") {
 
 /// Buttons translation
 
-// Fr buttons
+// Fr 
 Language_settings.french_button.addEventListener("click", french);
 Language_settings.mobile_french_button.addEventListener("click", french);
-
-// En buttons
-Language_settings.english_button.addEventListener("click", english);
-Language_settings.mobile_english_button.addEventListener("click", english);
 
 function french() {
   CurrLang = "fr";
 
-  lang();
+  lang_select_button();
   select_mark();
 
   // Switch Bubble language
@@ -63,10 +52,14 @@ function french() {
   }
 }
 
+// En 
+Language_settings.english_button.addEventListener("click", english);
+Language_settings.mobile_english_button.addEventListener("click", english);
+
 function english() {
   CurrLang = "en";
 
-  lang();
+  lang_select_button();
   select_mark();
 
   // Switch Bubble language

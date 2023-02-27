@@ -1,10 +1,10 @@
-import { Images } from "../variables";
-import { Desktop_buttons } from "../variables";
-import { Mobile_buttons } from "../variables";
-import { Language_settings } from "../variables";
+import { Images } from "../Global_settings/variables";
+import { Desktop_buttons } from "../Global_settings/variables";
+import { Mobile_buttons } from "../Global_settings/variables";
+import { Language_settings } from "../Global_settings/variables";
 import { CurrLang } from "./langage";
 
-/// Menu index buttons
+/// Buttons triggers
 const index_button_group = [
   Desktop_buttons.main,
   Desktop_buttons.langage,
@@ -129,7 +129,7 @@ export function button_text_reset() {
 
 /// Language switch for selected buttons
 
-export function lang() {
+export function lang_select_button() {
   if (CurrLang == "fr") {
     index_button_group[0].textContent = "Index";
     index_button_group[1].textContent = "Langue";
@@ -170,8 +170,6 @@ const desktop_button_group = [
   Language_settings.english_button,
 ];
 
-// In
-
 desktop_button_group.forEach((text) => {
   text.addEventListener("mouseover", button_mouseover);
 });
@@ -183,8 +181,6 @@ function button_mouseover() {
     this.style.textShadow = "red 1px 2px";
   }
 }
-
-// Out
 
 desktop_button_group.forEach((text) => {
   text.addEventListener("mouseout", button_mouseout);

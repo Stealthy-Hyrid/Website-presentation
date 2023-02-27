@@ -1,5 +1,8 @@
-import { General_settings, Language_settings } from "../variables";
-import { Images } from "../variables";
+import { General_settings } from "../Global_settings/variables";
+import { Images } from "../Global_settings/variables";
+
+
+/// Switch Dark/Light mode
 
 const Logo_list = [
   Images.git_large,
@@ -7,8 +10,6 @@ const Logo_list = [
   Images.linkedin_large,
   Images.linkedin_small,
 ];
-
-/// Switch Dark/Light mode
 
 Images.cat.addEventListener("click", switch_button);
 
@@ -19,8 +20,6 @@ function switch_button() {
     light_mod();
   }
 }
-
-/// Light mod
 
 function light_mod() {
   // Rain effect
@@ -64,11 +63,15 @@ function light_mod() {
     General_settings.selected[i].style.color = "white";
     General_settings.selected[i].style.textShadow = "black 1px 2px";
   }
+
+  for (let i = 0; i < General_settings.sub_selected.length; i++) {
+    General_settings.sub_selected[i].style.color = "white";
+    General_settings.sub_selected[i].style.textShadow = "black 1px 2px";
+  }
   // Langue button
 
   General_settings.selected_lang[0].style.color = "green";
 }
-/// Dark mod
 
 function dark_mod() {
   // Rain effect
@@ -107,6 +110,11 @@ function dark_mod() {
   for (let i = 0; i < General_settings.selected.length; i++) {
     General_settings.selected[i].style.color = "yellow";
     General_settings.selected[i].style.textShadow = "red 1px 2px";
+  }
+  
+  for (let i = 0; i < General_settings.sub_selected.length; i++) {
+    General_settings.sub_selected[i].style.color = "yellow";
+    General_settings.sub_selected[i].style.textShadow = "red 1px 2px";
   }
 
   // Langue button
