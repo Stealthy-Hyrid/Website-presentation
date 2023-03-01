@@ -1,8 +1,10 @@
 body {
  background-image: url(/Ressource/Image/dark.jpg);
- background-size: fill;
+ background-size: cover;
  background-repeat: no-repeat;
  background-position:top;
+ width:100%;
+ height:100%
 
 }
 
