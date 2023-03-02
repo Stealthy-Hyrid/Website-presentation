@@ -94,7 +94,7 @@ function dark_mod() {
 
   // Card
   for (let i = 0; i < General_settings.box.length; i++) {
-    General_settings.box[i].style.backgroundColor = "rgba(0, 0, 0, 0.7)";
+    General_settings.box[i].style.backgroundColor = "rgba(0, 0, 0, 0.8)";
     General_settings.box[i].style.border = "1px solid white";
     General_settings.box[i].style.boxShadow = "1px 1px 10px 0px white";
     General_settings.box[i].style.color = "white";

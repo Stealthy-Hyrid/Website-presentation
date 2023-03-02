@@ -24,9 +24,10 @@ const flag_blur = () => {
   
   if(CurrLang == "en") {
     Language_settings.mobile_english_button.style.filter = "blur(0px)"
-    Language_settings.mobile_french_button.style.filter = "blur(1px)"
+    Language_settings.mobile_french_button.style.filter = "blur(.8px)"
+  
   } else if (CurrLang == "fr") {
-    Language_settings.mobile_english_button.style.filter = "blur(1px)"
+    Language_settings.mobile_english_button.style.filter = "blur(.8px)"
     Language_settings.mobile_french_button.style.filter = "blur(0px)"
   }
 }
