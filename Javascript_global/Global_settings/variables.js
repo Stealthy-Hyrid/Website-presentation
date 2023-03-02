@@ -91,7 +91,8 @@ class Language_button {
     mobile_french_button,
     mobile_english_button,
     french_text,
-    english_text
+    english_text,
+    mobile_language_settings
   ) {
     this.french_button = french_button;
     this.english_button = english_button;
@@ -99,6 +100,7 @@ class Language_button {
     this.mobile_english_button = mobile_english_button;
     this.french_text = french_text;
     this.english_text = english_text;
+    this.mobile_language_settings = mobile_language_settings
   }
 }
 
@@ -108,5 +110,16 @@ export const Language_settings = new Language_button(
   document.getElementById("flag_fr"),
   document.getElementById("flag_en"),
   document.getElementsByClassName("fr"),
-  document.getElementsByClassName("en")
+  document.getElementsByClassName("en"),
+  document.getElementById("mobile_language_settings")
 );
+
+class Link {
+  constructor(a) {
+    this.a = a;
+  }
+}
+
+export const Hyperlink = new Link (
+  document.getElementsByTagName("a")
+)

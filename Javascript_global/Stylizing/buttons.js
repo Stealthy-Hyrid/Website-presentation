@@ -2,7 +2,7 @@ import { Images } from "../Global_settings/variables";
 import { Desktop_buttons } from "../Global_settings/variables";
 import { Mobile_buttons } from "../Global_settings/variables";
 import { Language_settings } from "../Global_settings/variables";
-import { CurrLang } from "./langage";
+import { CurrLang } from "./language";
 
 /// Buttons triggers
 const index_button_group = [
@@ -34,6 +34,7 @@ sub_button_group.forEach((text) => {
 /// Select button
 
 function select_button() {
+  
   // Checking if re-click
   if (this.classList.contains("selected_button")) {
     this.classList.remove("sub_selected_button");
@@ -43,13 +44,15 @@ function select_button() {
     } else {
       this.style.color = "white";
     }
+  
     button_text_reset();
+
   } else {
+
     // Reset
     button_text_reset();
 
     /// Display which button is clicked on and reset others
-
     this.textContent = "> " + this.textContent + " <";
     this.classList.add("selected_button");
 
@@ -78,12 +81,11 @@ function select_sub_button() {
     } else {
       this.style.color = "white";
     }
-
     sub_button_text_reset();
+
   } else {
-    // Reset
-    sub_button_text_reset();
 
+    sub_button_text_reset();
     /// Display which button is clicked on and reset others
     this.textContent = "> " + this.textContent;
     this.classList.add("sub_selected_button");
@@ -105,31 +107,33 @@ function select_sub_button() {
   }
 }
 
+
 /// Reset buttons
 
 export function sub_button_text_reset() {
-  sub_button_group.forEach((Reset) => {
-    Reset.classList.remove("sub_selected_button");
-
-    Reset.style.textShadow = "";
+  sub_button_group.forEach((Reset_this) => {
+    Reset_this.classList.remove("sub_selected_button");
+    Reset_this.style.textShadow = "unset";
   });
-  if (CurrLang == "fr") {
-    sub_button_group[0].textContent = "Présentation";
-    sub_button_group[1].textContent = "Compétences";
-    sub_button_group[2].textContent = "Contact";
-  } else if (CurrLang == "en") {
-    sub_button_group[0].textContent = "About Me";
-    sub_button_group[1].textContent = "Skill Set";
-    sub_button_group[2].textContent = "Contact";
-  }
-  sub_button_group[3].textContent = "Ressource";
+
+  sub_button();
 }
 export function button_text_reset() {
-  index_button_group.forEach((Reset) => {
-    Reset.classList.remove("selected_button");
-    Reset.style.textShadow = "";
+  index_button_group.forEach((Reset_this) => {
+    Reset_this.classList.remove("selected_button");
+    Reset_this.style.textShadow = "unset";
   });
 
+  main_button();
+}
+
+/// Language switch for selected buttons
+
+export function lang_button() {
+  main_button();
+  sub_button();
+}
+const main_button = () => {
   if (CurrLang == "fr") {
     index_button_group[0].textContent = "Index";
     index_button_group[3].textContent = "Index";
@@ -138,7 +142,6 @@ export function button_text_reset() {
     index_button_group[2].textContent = "Liens";
     index_button_group[7].textContent = "Liens";
     index_button_group[5].textContent = "Compétences";
-  index_button_group[5].textContent = "Compétences";
   } else if (CurrLang == "en") {
     index_button_group[0].textContent = "Main";
     index_button_group[3].textContent = "Main";
@@ -147,47 +150,21 @@ export function button_text_reset() {
     index_button_group[2].textContent = "Links";
     index_button_group[7].textContent = "Links";
     index_button_group[5].textContent = "Skill Set";
-  index_button_group[5].textContent = "Skill Set";
   }
-
-  
-  index_button_group[6].textContent = "Contact";
-  index_button_group[6].textContent = "Contact";
   index_button_group[8].textContent = "Ressource";
-  sub_button_group[3].textContent = "Ressource";
-}
-
-/// Language switch for selected buttons
-
-export function lang_select_button() {
+  index_button_group[6].textContent = "Contact";
+};
+const sub_button = () => {
   if (CurrLang == "fr") {
-    index_button_group[0].textContent = "Index";
-    index_button_group[3].textContent = "Index";
-    index_button_group[1].textContent = "Langue";
-    index_button_group[4].textContent = "Présentation";
     sub_button_group[0].textContent = "Présentation";
-    index_button_group[2].textContent = "Liens";
-    index_button_group[7].textContent = "Liens";
     sub_button_group[1].textContent = "Compétences";
-  index_button_group[5].textContent = "Compétences";
   } else if (CurrLang == "en") {
-    index_button_group[0].textContent = "Main";
-    index_button_group[3].textContent = "Main";
-    index_button_group[4].textContent = "About Me";
     sub_button_group[0].textContent = "About Me";
-    index_button_group[1].textContent = "Language";
-    index_button_group[2].textContent = "Links";
-    index_button_group[7].textContent = "Links";
     sub_button_group[1].textContent = "Skill Set";
-  index_button_group[5].textContent = "Skill Set";
   }
-
-  index_button_group[8].textContent = "Ressource";
   sub_button_group[3].textContent = "Ressource";
-  
   sub_button_group[2].textContent = "Contact";
-  index_button_group[6].textContent = "Contact";
-}
+};
 
 /// Button hover stylizing
 
@@ -209,7 +186,10 @@ desktop_button_group.forEach((text) => {
 
 function button_mouseover() {
   if (Images.cat.style.filter == "invert(100%)") {
-    if (this.classList.contains('selected_button') || (this.classList.contains('sub_selected_button'))) {
+    if (
+      this.classList.contains("selected_button") ||
+      this.classList.contains("sub_selected_button")
+    ) {
       this.style.textShadow = "black 1px 2px";
     } else {
       this.style.textShadow = "white 1px 2px";

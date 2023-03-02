@@ -1,36 +1,37 @@
 /* Card and menu */
 
 #card_group {
-    overflow: hidden;
-  }
-  
-  .card_settings {
-    margin-left: 40px;
-  }
+  overflow: hidden;
+}
 
-  .box_settings {
-    background-color: rgba(0, 0, 0, 0.86);
-    border: 1px solid white;
-    box-shadow: 1px 1px 15px white;
-  }
+.card_settings {
+  width: 65vw;
+  margin-left: 40px;
+}
 
-  .portfolio_box {
-    width: fit-content;
-    background-color: rgba(0, 0, 0, 0.9);
-    border: 1px solid white;
-    box-shadow: 1px 1px 15px white;
-    border-radius: 10px;
-  
-  }
+.box_settings {
+  background-color: rgba(0, 0, 0, 0.86);
+  border: 1px solid white;
+  box-shadow: 1px 1px 15px white;
+}
 
-  .display_settings {
-    margin-left: 50px;
-  }
-  
-   .mobile_language {
-    position:absolute;
-    width: 110px;
-    top: 10px;
-    right : 20px;
-    padding: 0px;
-  }
+.portfolio_box {
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid white;
+  box-shadow: 1px 1px 15px white;
+  border-radius: 10px;
+}
+
+.display_settings {
+  margin-left: 50px;
+}
+
+#mobile_language_settings {
+  position: absolute;
+  margin-right:1vw;
+  width: 110px;
+  top: 10px;
+  right: 20px;
+}
+

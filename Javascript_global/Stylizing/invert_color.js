@@ -1,6 +1,6 @@
 import { General_settings } from "../Global_settings/variables";
 import { Images } from "../Global_settings/variables";
-
+import { Hyperlink } from "../Global_settings/variables";
 
 /// Switch Dark/Light mode
 
@@ -63,6 +63,13 @@ function light_mod() {
     General_settings.sub_selected[i].style.color = "white";
     General_settings.sub_selected[i].style.textShadow = "black 1px 2px";
   }
+
+  // Hyperlink
+  
+  for (let i = 0; i < Hyperlink.a.length; i++) {
+    Hyperlink.a[i].style.color = "white";
+  }
+
   // Langue button
 
   General_settings.selected_lang[0].style.color = "green";
@@ -71,7 +78,6 @@ function light_mod() {
 function dark_mod() {
   // Rain effect
   General_settings.rain.style.display = "unset";
-
 
   // Background
   General_settings.body.style.backgroundImage =
@@ -103,10 +109,16 @@ function dark_mod() {
     General_settings.selected[i].style.color = "yellow";
     General_settings.selected[i].style.textShadow = "red 1px 2px";
   }
-  
+
   for (let i = 0; i < General_settings.sub_selected.length; i++) {
     General_settings.sub_selected[i].style.color = "yellow";
     General_settings.sub_selected[i].style.textShadow = "red 1px 2px";
+  }
+
+   // Hyperlink
+  
+   for (let i = 0; i < Hyperlink.a.length; i++) {
+    Hyperlink.a[i].style.color = "yellow";
   }
 
   // Langue button

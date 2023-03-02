@@ -25,10 +25,11 @@
   
   .mobile_flag {
     cursor: pointer;
-    width: 35px;
+    width: 50px;
     border: 1px solid white;
-    margin-top: 100px;
-    margin-left: 5px;
+    margin-top: 1vh;
+  
   }
+
 
   

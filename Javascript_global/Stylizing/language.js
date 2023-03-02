@@ -1,16 +1,44 @@
-import { Language_settings, General_settings, Images } from "../Global_settings/variables";
-import { lang_select_button } from "./buttons";
+import {Language_settings, General_settings, Images,} from "../Global_settings/variables";
+import { lang_button } from "./buttons";
 
+// Default Lang
 export let CurrLang = "en";
 
 
-/// Buttons translation
+/// Translation
 
-function lang() {
+// Keep the button select mark after switching lang
+const select_mark = () => {
+  if (General_settings.selected[0]) {
+    General_settings.selected[0].textContent =
+    "> " + General_settings.selected[0].textContent + " <";
+  }
+  if (General_settings.sub_selected[0]) {
+    General_settings.sub_selected[0].textContent =
+    "> " + General_settings.sub_selected[0].textContent;
+  }
+}
+
+// Bluring non selected lang
+const flag_blur = () => {
+  
+  if(CurrLang == "en") {
+    Language_settings.mobile_english_button.style.filter = "blur(0px)"
+    Language_settings.mobile_french_button.style.filter = "blur(1px)"
+  } else if (CurrLang == "fr") {
+    Language_settings.mobile_english_button.style.filter = "blur(1px)"
+    Language_settings.mobile_french_button.style.filter = "blur(0px)"
+  }
+}
+
+addEventListener("load", flag_blur)
+
+// Switching card text
+const lang_text = () => {
   if (CurrLang == "en") {
     for (let i = 0; i < Language_settings.french_text.length; i++) {
       Language_settings.french_text[i].style.display = "none";
-  
+      
       for (let i = 0; i < Language_settings.english_text.length; i++) {
         Language_settings.english_text[i].style.display = "unset";
       }
@@ -19,23 +47,31 @@ function lang() {
     for (let i = 0; i < Language_settings.english_text.length; i++) {
       Language_settings.english_text[i].style.display = "none";
     }
-  
+    
     for (let i = 0; i < Language_settings.french_text.length; i++) {
       Language_settings.french_text[i].style.display = "unset";
     }
   }
 }
 
-// Fr 
+// Trigger
+
+function lang() {
+  lang_button();
+  lang_text()
+  select_mark();
+  flag_blur()
+}
+
+// Fr
 Language_settings.french_button.addEventListener("click", french);
 Language_settings.mobile_french_button.addEventListener("click", french);
 
 function french() {
+  
   CurrLang = "fr";
-  lang()
-  lang_select_button();
-  select_mark();
-
+  lang();
+ 
   // Switch Bubble language
   Images.default_bubble.src = "/Ressource/Image/speech_fr.gif";
   Images.default_bubble.style.width = "250px";
@@ -56,22 +92,20 @@ function french() {
   }
 }
 
-// En 
+// En
 Language_settings.english_button.addEventListener("click", english);
 Language_settings.mobile_english_button.addEventListener("click", english);
 
 function english() {
-  CurrLang = "en";
   
-  lang()
-  lang_select_button();
-  select_mark();
-
+  CurrLang = "en";
+  lang();
+ 
   // Switch Bubble language
   Images.default_bubble.src = "/Ressource/Image/speech.gif";
   Images.default_bubble.style.width = "200px";
-  Images.default_bubble.style.left = "100px"
-  Images.default_bubble.style.top = "10px"
+  Images.default_bubble.style.left = "100px";
+  Images.default_bubble.style.top = "10px";
 
   // Lang button coloring
   Language_settings.french_button.classList.remove("selected_lang");
@@ -85,17 +119,3 @@ function english() {
     Language_settings.english_button.style.color = "palevioletred";
   }
 }
-
-// Keep the button select style after switching
-
-function select_mark() {
-  if (General_settings.selected[0]) {
-    General_settings.selected[0].textContent =
-      "> " + General_settings.selected[0].textContent + " <";
-  }
-  if (General_settings.sub_selected[0]) {
-    General_settings.sub_selected[0].textContent =
-      "> " + General_settings.sub_selected[0].textContent;
-  }
-}
-

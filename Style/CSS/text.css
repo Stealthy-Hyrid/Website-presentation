@@ -7,9 +7,17 @@ body {
     font-family: VT323;
   }
 
+a {
+  color:yellow;
+}
+
   .text_settings {
     color: white;
     text-decoration: none; 
+  }
+
+  .mobile_text {
+    font-size:20px;
   }
 
   .card_text_settings {
