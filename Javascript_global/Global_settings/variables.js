@@ -46,7 +46,7 @@ class Images_list {
 export const Images = new Images_list(
   document.getElementById("cat"),
   document.getElementsByClassName("bubble"),
-  document.getElementsByClassName("svg_settings")
+  document.getElementsByClassName("bw_svg_settings")
 );
 
 /// General

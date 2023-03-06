@@ -1,3 +1,8 @@
+
+img {
+  -webkit-user-drag: none;
+}
+
 .cat_settings {
     width: 140px;
     cursor: pointer;
@@ -6,7 +11,7 @@
     filter: invert(0%);
   }
   
-  .bubble {
+.bubble {
     visibility: visible;
     position: absolute;
     left: 100px;
@@ -14,28 +19,30 @@
     width: 200px;
   }
 
+#bubble_fr {
+  width : 240px;
+  left : 87px;
+  top : 9px;
+  }
 
-  .svg_settings {
+.bw_svg_settings {
     width: 50px;
     filter: invert(100%);
   }
 
-  .portfolio_svg_settings {
+.portfolio_svg_settings {
     width: 70px;
   }
   
-  .info {
+.info {
     width: 25px;
     margin-bottom:5px;
   }
   
-  .mobile_flag {
+.mobile_flag {
     cursor: pointer;
     width: 50px;
-    border: 1px solid white;
+
     margin-top: 1vh;
 
   }
-
-
-  

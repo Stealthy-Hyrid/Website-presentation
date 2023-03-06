@@ -31,7 +31,6 @@ sub_button_group.forEach((text) => {
 });
 
 /// Select button
-
 function select_button() {
   
   // Checking if re-click
@@ -106,17 +105,7 @@ function select_sub_button() {
   }
 }
 
-
 /// Reset buttons
-
-export function sub_button_text_reset() {
-  sub_button_group.forEach((Reset_this) => {
-    Reset_this.classList.remove("sub_selected_button");
-    Reset_this.style.textShadow = "unset";
-  });
-
-  sub_button();
-}
 export function button_text_reset() {
   index_button_group.forEach((Reset_this) => {
     Reset_this.classList.remove("selected_button");
@@ -125,14 +114,21 @@ export function button_text_reset() {
 
   main_button();
 }
+export function sub_button_text_reset() {
+  sub_button_group.forEach((Reset_this) => {
+    Reset_this.classList.remove("sub_selected_button");
+    Reset_this.style.textShadow = "unset";
+  });
+
+  sub_button();
+}
 
 /// Language switch for selected buttons
-
 export function lang_button() {
   main_button();
   sub_button();
 }
-const main_button = () => {
+function main_button() {
   if (CurrLang == "fr") {
     index_button_group[0].textContent = "Index";
     index_button_group[1].textContent = "Langue";
@@ -149,9 +145,9 @@ const main_button = () => {
     index_button_group[4].textContent = "Skill set";
   }
   index_button_group[7].textContent = "Ressource";
-  index_button_group[6].textContent = "Contact";
+ 
 };
-const sub_button = () => {
+function sub_button() {
   if (CurrLang == "fr") {
     sub_button_group[0].textContent = "Présentation";
     sub_button_group[1].textContent = "Compétences";
@@ -163,8 +159,8 @@ const sub_button = () => {
   sub_button_group[2].textContent = "Contact";
 };
 
-/// Button hover stylizing
 
+/// Button hover stylizing
 const desktop_button_group = [
   Desktop_buttons.main,
   Desktop_buttons.about,
@@ -177,8 +173,9 @@ const desktop_button_group = [
   Language_settings.english_button,
 ];
 
-desktop_button_group.forEach((text) => {
-  text.addEventListener("mouseover", button_mouseover);
+desktop_button_group.forEach((trigger) => {
+  trigger.addEventListener("mouseover", button_mouseover);
+  trigger.addEventListener("mouseout", button_mouseout);
 });
 
 function button_mouseover() {
@@ -195,10 +192,6 @@ function button_mouseover() {
     this.style.textShadow = "red 1px 2px";
   }
 }
-
-desktop_button_group.forEach((text) => {
-  text.addEventListener("mouseout", button_mouseout);
-});
 
 function button_mouseout() {
   if ((!this.classList.contains("selected_button")) && (!this.classList.contains("sub_selected_button"))) {

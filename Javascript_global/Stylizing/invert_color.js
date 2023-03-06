@@ -3,9 +3,6 @@ import { Images } from "../Global_settings/variables";
 import { Hyperlink } from "../Global_settings/variables";
 
 /// Switch Dark/Light mode
-
-
-
 Images.cat.addEventListener("click", switch_button);
 
 function switch_button() {
@@ -69,7 +66,7 @@ function light_mod() {
     Hyperlink.a[i].style.color = "white";
   }
 
-  // Langue button
+  // Language button
 
   General_settings.selected_lang[0].style.color = "green";
 }
@@ -120,7 +117,7 @@ function dark_mod() {
     Hyperlink.a[i].style.color = "yellow";
   }
 
-  // Langue button
+  // Language button
 
   General_settings.selected_lang[0].style.color = "palevioletred";
 }
