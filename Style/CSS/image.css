@@ -6,21 +6,27 @@
     filter: invert(0%);
   }
   
-  .logo_settings {
-    width: 50px;
-    filter: invert(100%);
-  }
-
-  .portfolio_logo_settings {
-    width: 70px;
-  }
-  
-  #default_bubble {
+  .bubble {
     visibility: visible;
     position: absolute;
     left: 100px;
     top:10px;
     width: 200px;
+  }
+
+
+  .svg_settings {
+    width: 50px;
+    filter: invert(100%);
+  }
+
+  .portfolio_svg_settings {
+    width: 70px;
+  }
+  
+  .info {
+    width: 25px;
+    margin-bottom:5px;
   }
   
   .mobile_flag {

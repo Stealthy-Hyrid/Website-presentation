@@ -9,7 +9,6 @@ const index_button_group = [
   Desktop_buttons.main,
   Desktop_buttons.langage,
   Desktop_buttons.link,
-  Mobile_buttons.main,
   Mobile_buttons.about,
   Mobile_buttons.portfolio,
   Mobile_buttons.contact,
@@ -136,22 +135,20 @@ export function lang_button() {
 const main_button = () => {
   if (CurrLang == "fr") {
     index_button_group[0].textContent = "Index";
-    index_button_group[3].textContent = "Index";
     index_button_group[1].textContent = "Langue";
-    index_button_group[4].textContent = "Présentation";
+    index_button_group[3].textContent = "Présentation";
     index_button_group[2].textContent = "Liens";
-    index_button_group[7].textContent = "Liens";
-    index_button_group[5].textContent = "Compétences";
+    index_button_group[6].textContent = "Liens";
+    index_button_group[4].textContent = "Compétences";
   } else if (CurrLang == "en") {
     index_button_group[0].textContent = "Main";
-    index_button_group[3].textContent = "Main";
-    index_button_group[4].textContent = "About Me";
+    index_button_group[3].textContent = "About me";
     index_button_group[1].textContent = "Language";
     index_button_group[2].textContent = "Links";
-    index_button_group[7].textContent = "Links";
-    index_button_group[5].textContent = "Skill Set";
+    index_button_group[6].textContent = "Links";
+    index_button_group[4].textContent = "Skill set";
   }
-  index_button_group[8].textContent = "Ressource";
+  index_button_group[7].textContent = "Ressource";
   index_button_group[6].textContent = "Contact";
 };
 const sub_button = () => {
@@ -159,8 +156,8 @@ const sub_button = () => {
     sub_button_group[0].textContent = "Présentation";
     sub_button_group[1].textContent = "Compétences";
   } else if (CurrLang == "en") {
-    sub_button_group[0].textContent = "About Me";
-    sub_button_group[1].textContent = "Skill Set";
+    sub_button_group[0].textContent = "About me";
+    sub_button_group[1].textContent = "Skill set";
   }
   sub_button_group[3].textContent = "Ressource";
   sub_button_group[2].textContent = "Contact";
@@ -204,5 +201,8 @@ desktop_button_group.forEach((text) => {
 });
 
 function button_mouseout() {
-  this.style.textShadow = "";
+  if ((!this.classList.contains("selected_button")) && (!this.classList.contains("sub_selected_button"))) {
+    this.style.textShadow = "";
+
+  }
 }

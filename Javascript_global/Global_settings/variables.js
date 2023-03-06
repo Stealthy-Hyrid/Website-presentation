@@ -34,31 +34,19 @@ export const Mobile_buttons = new Buttons(
 class Images_list {
   constructor(
     cat,
-    git_large,
-    git_small,
-    linkedin_large,
-    linkedin_small,
-    default_bubble,
-    switched_bubble,
+    bubble,
+    svg_bw
   ) {
     this.cat = cat;
-    this.git_large = git_large;
-    this.git_small = git_small;
-    this.linkedin_large = linkedin_large;
-    this.linkedin_small = linkedin_small;
-    this.default_bubble = default_bubble;
-    this.switched_bubble = switched_bubble;
+    this.bubble = bubble; 
+    this.svg_bw = svg_bw;
   }
 }
 
 export const Images = new Images_list(
-  document.getElementById("cat_logo"),
-  document.getElementById("git_logo"),
-  document.getElementById("git_logo_small"),
-  document.getElementById("linkedin_logo"),
-  document.getElementById("linkedin_small_logo"),
-  document.getElementById("default_bubble"),
-  document.getElementById("switched_bubble")
+  document.getElementById("cat"),
+  document.getElementsByClassName("bubble"),
+  document.getElementsByClassName("svg_settings")
 );
 
 /// General

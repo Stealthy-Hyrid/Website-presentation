@@ -11,6 +11,11 @@ a {
   color:yellow;
 }
 
+.title {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
   .text_settings {
     color: white;
     text-decoration: none; 

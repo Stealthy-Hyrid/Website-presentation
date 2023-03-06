@@ -74,10 +74,9 @@ function french() {
   lang();
  
   // Switch Bubble language
-  Images.default_bubble.src = "/Ressource/Image/speech_fr.gif";
-  Images.default_bubble.style.width = "250px";
-  Images.default_bubble.style.left = "85px";
-  Images.default_bubble.style.top = "7px";
+  Images.bubble[0].style.width = "250px";
+  Images.bubble[0].style.left = "85px";
+  Images.bubble[0].style.top = "7px";
 
   // Lang button coloring
 
@@ -103,10 +102,9 @@ function english() {
   lang();
  
   // Switch Bubble language
-  Images.default_bubble.src = "/Ressource/Image/speech.gif";
-  Images.default_bubble.style.width = "200px";
-  Images.default_bubble.style.left = "100px";
-  Images.default_bubble.style.top = "10px";
+  Images.bubble[1].style.width = "200px";
+  Images.bubble[1].style.left = "100px";
+  Images.bubble[1].style.top = "10px";
 
   // Lang button coloring
   Language_settings.french_button.classList.remove("selected_lang");
